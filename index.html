@@ -1786,7 +1786,19 @@
     let isPage18Unlocked = false;
     let enteredPin = "";
     const SECRET_PIN = "1711";
-    let detectedPathPrefix = '';
+    let detectedPathPrefix = 'Prosenjit_Priya_Story/';
+
+    // Automatically probe whether files are in Prosenjit_Priya_Story/ (GitHub) or root (local)
+    (function detectPrefix() {
+      const probe = new Image();
+      probe.onload = function() {
+        detectedPathPrefix = 'Prosenjit_Priya_Story/';
+      };
+      probe.onerror = function() {
+        detectedPathPrefix = '';
+      };
+      probe.src = 'Prosenjit_Priya_Story/ch01_invitation/card.jpg';
+    })();
 
     function getPhotoPath(folder, filename) {
       const cleanFile = filename.replace(/\.webp$/i, '.jpg');
@@ -1804,35 +1816,42 @@
 
       const cands = [];
 
-      // If it started with photos/, try without photos/
-      if (cur.startsWith('photos/')) {
-        cands.push(cur.replace(/^photos\//, ''));
+      // 1. Try with and without Prosenjit_Priya_Story/
+      if (cur.includes('Prosenjit_Priya_Story/')) {
+        cands.push(cur.replace('Prosenjit_Priya_Story/', ''));
+      } else {
+        cands.push('Prosenjit_Priya_Story/' + cur);
+      }
+
+      // 2. Try without photos/ and with photos/
+      if (cur.includes('photos/')) {
+        cands.push(cur.replace('photos/', ''));
       } else {
         cands.push('photos/' + cur);
       }
 
-      // If it has .webp, try .jpg, .JPG, .jpeg
+      // 3. Try replacing .webp with .jpg, .JPG, .jpeg
       if (cur.includes('.webp')) {
         cands.push(cur.replace(/\.webp$/i, '.jpg'));
         cands.push(cur.replace(/\.webp$/i, '.JPG'));
         cands.push(cur.replace(/\.webp$/i, '.jpeg'));
       }
 
-      // Extension variations
+      // 4. Try extension variations across both folder prefixes
       const m = cur.match(/^(.*)\.([A-Za-z0-9]+)$/);
       if (m) {
-        ['jpg', 'JPG', 'jpeg', 'JPEG', 'png', 'webp'].forEach(e => {
-          cands.push(m[1] + '.' + e);
-          if (m[1].startsWith('photos/')) {
-            cands.push(m[1].replace(/^photos\//, '') + '.' + e);
+        ['jpg', 'JPG', 'jpeg', 'png'].forEach(ext => {
+          cands.push(m[1] + '.' + ext);
+          if (m[1].includes('Prosenjit_Priya_Story/')) {
+            cands.push(m[1].replace('Prosenjit_Priya_Story/', '') + '.' + ext);
           } else {
-            cands.push('photos/' + m[1] + '.' + e);
+            cands.push('Prosenjit_Priya_Story/' + m[1] + '.' + ext);
           }
         });
       }
 
       const next = cands.find(c => c && !tries.includes(c));
-      if (next && tries.length < 14) {
+      if (next && tries.length < 16) {
         img.src = next;
       } else {
         let n = cur.split('/').pop() || cur;
