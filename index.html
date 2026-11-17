@@ -1,0 +1,2741 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <title>৭৩০ দিন: বেরুই থেকে জেজুর, অতঃপর আমরা তিনজন ❤️ | ২য় বিবাহবার্ষিকী</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Galada&family=Hind+Siliguri:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg-gradient: radial-gradient(circle at 50% 25%, #360917 0%, #180309 65%, #090104 100%);
+      --crimson-deep: #4a0614;
+      --crimson-royal: #780d22;
+      --crimson-accent: #9e1430;
+      --gold-primary: #d4af37;
+      --gold-light: #f7e29c;
+      --gold-dark: #aa8522;
+      --gold-glow: rgba(212, 175, 55, 0.45);
+      --parchment: #faf5eb;
+      --parchment-shade: #f0e4ce;
+      --parchment-border: #decba8;
+      --text-dark: #261217;
+      --text-muted: #63424a;
+      --book-width: min(46vw, 540px);
+      --book-height: min(84vh, calc(100dvh - 122px));
+      --book-shadow: 0 18px 50px rgba(0, 0, 0, 0.8), 0 6px 18px rgba(0,0,0,0.5);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    html, body {
+      height: 100%;
+      height: 100dvh;
+      width: 100vw;
+      overflow: hidden;
+      background: var(--bg-gradient);
+      color: #fff;
+      font-family: 'Hind Siliguri', sans-serif;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+      user-select: none;
+    }
+
+    #ambientCanvas {
+      position: fixed;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    /* CINEMATIC VELVET CURTAIN OVERLAY */
+    .curtain-overlay {
+      position: fixed;
+      inset: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .curtain-left, .curtain-right {
+      position: absolute;
+      top: 0;
+      width: 50.5vw;
+      height: 100vh;
+      background: repeating-linear-gradient(90deg, #38040d 0px, #5c0919 25px, #8a1228 50px, #4a0613 75px, #2c0209 100px);
+      box-shadow: inset 0 0 70px rgba(0,0,0,0.85);
+      transition: transform 1.6s cubic-bezier(0.77, 0, 0.175, 1);
+      z-index: 1;
+    }
+
+    .curtain-left { left: 0; border-right: 4px solid var(--gold-primary); }
+    .curtain-right { right: 0; border-left: 4px solid var(--gold-primary); }
+
+    .curtain-fringe {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 24px;
+      background: repeating-linear-gradient(90deg, var(--gold-dark) 0px, var(--gold-light) 6px, var(--gold-dark) 12px);
+    }
+
+    .curtain-opened .curtain-left { transform: translateX(-102%); }
+    .curtain-opened .curtain-right { transform: translateX(102%); }
+    .curtain-opened .intro-center-card {
+      opacity: 0;
+      transform: scale(1.12);
+      pointer-events: none;
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+
+    .intro-center-card {
+      position: relative;
+      z-index: 10;
+      background: radial-gradient(circle at 50% 35%, rgba(65, 8, 20, 0.97) 0%, rgba(25, 3, 7, 0.99) 100%);
+      border: 2px solid var(--gold-primary);
+      border-radius: 20px;
+      padding: 28px 24px;
+      max-width: 450px;
+      width: 88%;
+      text-align: center;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.9), 0 0 40px var(--gold-glow);
+    }
+
+    .intro-seal {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      background: radial-gradient(circle, var(--gold-light), var(--gold-dark));
+      margin: 0 auto 12px auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 30px;
+      color: var(--crimson-royal);
+      border: 3px solid #fff;
+      box-shadow: 0 0 25px var(--gold-glow);
+    }
+
+    .intro-title {
+      font-family: 'Galada', cursive;
+      font-size: 24px;
+      color: var(--gold-light);
+      margin-bottom: 6px;
+      line-height: 1.3;
+    }
+
+    .intro-sub { font-size: 13px; color: #ffe0e7; margin-bottom: 12px; }
+
+    .intro-date-badge {
+      display: inline-block;
+      background: rgba(212, 175, 55, 0.2);
+      border: 1px solid var(--gold-primary);
+      color: var(--gold-light);
+      padding: 4px 14px;
+      border-radius: 20px;
+      font-size: 12px;
+      margin-bottom: 18px;
+      font-weight: 600;
+    }
+
+    .intro-tap-btn {
+      background: linear-gradient(135deg, var(--gold-light) 0%, var(--gold-primary) 50%, var(--gold-dark) 100%);
+      color: #38050e;
+      border: none;
+      padding: 12px 26px;
+      border-radius: 35px;
+      font-size: 15px;
+      font-weight: 700;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.6), 0 0 25px var(--gold-glow);
+      font-family: 'Hind Siliguri', sans-serif;
+    }
+
+    /* COMPACT APP HEADER */
+    header.app-header {
+      width: 100%;
+      max-width: 1120px;
+      height: 44px;
+      padding: 4px 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 30;
+    }
+
+    .brand-container { display: flex; align-items: center; gap: 10px; }
+
+    .brand-seal {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: radial-gradient(circle, var(--gold-light), var(--gold-dark));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1.5px solid #fff;
+      color: var(--crimson-royal);
+      font-size: 16px;
+    }
+
+    .brand-title {
+      font-family: 'Galada', cursive;
+      font-size: 17px;
+      color: var(--gold-light);
+      line-height: 1.2;
+    }
+
+    .header-controls { display: flex; align-items: center; gap: 8px; }
+
+    .control-btn {
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(212, 175, 55, 0.5);
+      color: var(--gold-light);
+      padding: 5px 12px;
+      border-radius: 20px;
+      cursor: pointer;
+      font-size: 12px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-family: 'Hind Siliguri', sans-serif;
+    }
+
+    .eq-bars { display: flex; align-items: flex-end; gap: 2px; height: 12px; width: 12px; }
+    .eq-bar { width: 2px; background: var(--gold-light); border-radius: 1px; height: 3px; }
+    .playing .eq-bar:nth-child(1) { animation: eqAnim 0.7s infinite alternate ease-in-out; }
+    .playing .eq-bar:nth-child(2) { animation: eqAnim 0.9s 0.2s infinite alternate ease-in-out; }
+    .playing .eq-bar:nth-child(3) { animation: eqAnim 0.6s 0.4s infinite alternate ease-in-out; }
+    @keyframes eqAnim { 0% { height: 2px; } 100% { height: 12px; } }
+
+    /* TOP INFO BAR */
+    .top-info-bar {
+      width: 95%;
+      max-width: 960px;
+      height: 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 8px;
+      background: linear-gradient(135deg, rgba(80, 10, 25, 0.9) 0%, rgba(35, 4, 11, 0.98) 100%);
+      border: 1px solid rgba(212, 175, 55, 0.55);
+      border-radius: 20px;
+      padding: 0 12px;
+      z-index: 20;
+    }
+
+    .milestone-badge-text {
+      font-size: 11.5px;
+      color: var(--gold-light);
+      font-weight: 500;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .current-music-pill {
+      font-size: 10.5px;
+      color: #ffd8e2;
+      background: rgba(0, 0, 0, 0.45);
+      padding: 2px 10px;
+      border-radius: 12px;
+      border: 1px solid rgba(212, 175, 55, 0.35);
+      white-space: nowrap;
+    }
+
+    /* 3D FLIPBOOK STAGE */
+    .book-stage {
+      position: relative;
+      width: 100%;
+      flex: 1;
+      min-height: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 4px 10px;
+      perspective: 2600px;
+      z-index: 10;
+      overflow: hidden;
+    }
+
+    .book-container {
+      position: relative;
+      width: var(--book-width);
+      height: var(--book-height);
+      transform-style: preserve-3d;
+      transition: transform 0.7s cubic-bezier(0.25, 1, 0.5, 1);
+    }
+
+    @media (min-width: 960px) {
+      .book-container.cover-view {
+        transform: translateX(0);
+      }
+      .book-container.spread-view {
+        transform: translateX(50%);
+      }
+    }
+
+    .book-page {
+      -webkit-transform-style: preserve-3d;
+      transform-style: preserve-3d;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+      will-change: transform;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 6px 16px 16px 6px;
+      transform-origin: left center;
+      transform-style: preserve-3d;
+      transition: transform 0.95s cubic-bezier(0.645, 0.045, 0.355, 1);
+      box-shadow: var(--book-shadow);
+    }
+
+    .page-face {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+      border-radius: 6px 16px 16px 6px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .page-back {
+      transform: rotateY(180deg);
+      border-radius: 16px 6px 6px 16px;
+    }
+
+    .page-face::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; width: 28px; height: 100%;
+      background: linear-gradient(to right, rgba(0,0,0,0.28) 0%, rgba(0,0,0,0.06) 45%, transparent 100%);
+      pointer-events: none;
+      z-index: 20;
+    }
+
+    .page-back::before {
+      left: auto; right: 0;
+      background: linear-gradient(to left, rgba(0,0,0,0.28) 0%, rgba(0,0,0,0.06) 45%, transparent 100%);
+    }
+
+    /* COVER */
+    .cover-style {
+      background: radial-gradient(circle at 50% 35%, #841427 0%, #4c0714 65%, #2a030a 100%);
+      border: 6px solid #200206;
+      outline: 2px solid var(--gold-primary);
+      outline-offset: -4px;
+      padding: 20px 18px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      color: #fff;
+      box-shadow: inset 0 0 40px rgba(0,0,0,0.8);
+      position: relative;
+    }
+
+    .cover-border-ornament {
+      position: absolute;
+      inset: 10px;
+      border: 1px dashed rgba(212, 175, 55, 0.65);
+      border-radius: 4px;
+      pointer-events: none;
+    }
+
+    .cover-mandala {
+      width: 74px;
+      height: 74px;
+      margin: 0 auto 10px auto;
+      border-radius: 50%;
+      border: 2px double var(--gold-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 32px;
+      color: var(--gold-light);
+      background: radial-gradient(circle, rgba(212,175,55,0.25), transparent 75%);
+    }
+
+    .cover-title {
+      font-family: 'Galada', cursive;
+      font-size: 24px;
+      color: var(--gold-light);
+      line-height: 1.3;
+      text-shadow: 0 2px 6px rgba(0,0,0,0.9);
+      margin-bottom: 8px;
+    }
+
+    .cover-subtitle { font-size: 12.5px; color: #ffe0e7; margin-bottom: 10px; }
+
+    .cover-names {
+      font-size: 14px;
+      color: #fff;
+      font-weight: 600;
+      background: rgba(0,0,0,0.45);
+      display: inline-block;
+      padding: 6px 16px;
+      border-radius: 25px;
+      border: 1px solid rgba(212, 175, 55, 0.5);
+      margin-bottom: 12px;
+    }
+
+    .cover-cta-btn {
+      background: linear-gradient(135deg, var(--gold-light) 0%, var(--gold-primary) 50%, var(--gold-dark) 100%);
+      color: #38050e;
+      border: none;
+      padding: 10px 24px;
+      border-radius: 30px;
+      font-size: 14.5px;
+      font-weight: 700;
+      cursor: pointer;
+      font-family: 'Hind Siliguri', sans-serif;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.5);
+    }
+
+    /* STORY CHAPTER PAGES */
+    .story-page-style {
+      background: #faf5eb;
+      background-image: linear-gradient(135deg, #fdfbf7 0%, #faf5eb 60%, #f0e4ce 100%);
+      border: 1.5px solid var(--parchment-border);
+      color: var(--text-dark);
+      padding: 14px 16px 10px 18px;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .page-header-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 4px;
+      gap: 6px;
+    }
+
+    .ch-badge {
+      background: linear-gradient(135deg, var(--crimson-royal), var(--crimson-deep));
+      color: var(--gold-light);
+      padding: 2px 10px;
+      border-radius: 10px;
+      font-size: 11px;
+      font-weight: 600;
+      border: 1px solid var(--gold-primary);
+      white-space: nowrap;
+    }
+
+    .ch-date-badge {
+      font-size: 10.5px;
+      color: var(--crimson-royal);
+      font-weight: 600;
+      background: rgba(120, 16, 34, 0.08);
+      padding: 2px 8px;
+      border-radius: 8px;
+      border: 1px dashed rgba(120, 16, 34, 0.35);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .ch-title {
+      font-family: 'Galada', cursive;
+      font-size: 18px;
+      color: var(--crimson-deep);
+      line-height: 1.28;
+      margin-bottom: 4px;
+    }
+
+    /* PHOTO STAGE */
+    .photo-stage-wrapper {
+      position: relative;
+      width: 100%;
+      flex: 1;
+      min-height: 0;
+      margin: 2px 0 6px 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .polaroid-frame {
+      background: #ffffff;
+      padding: 6px 6px 8px 6px;
+      border-radius: 6px;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      position: relative;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      cursor: pointer;
+      overflow: hidden;
+    }
+
+    .photo-viewport {
+      width: 100%;
+      flex: 1;
+      min-height: 0;
+      border-radius: 4px;
+      overflow: hidden;
+      background: radial-gradient(circle at 50% 50%, #300612 0%, #150207 100%);
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .photo-viewport img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      object-position: center;
+      transition: opacity 0.2s ease;
+      filter: contrast(1.05) saturate(1.12) brightness(1.02);
+    }
+
+    .photo-count-badge {
+      position: absolute;
+      top: 8px;
+      right: 8px;
+      background: rgba(20, 3, 8, 0.88);
+      color: var(--gold-light);
+      font-size: 11px;
+      font-weight: 600;
+      padding: 3px 10px;
+      border-radius: 12px;
+      border: 1px solid var(--gold-primary);
+      z-index: 9;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+    }
+
+    .zoom-hint-btn {
+      position: absolute;
+      bottom: 8px;
+      right: 8px;
+      background: rgba(20, 3, 8, 0.85);
+      color: var(--gold-light);
+      font-size: 10px;
+      padding: 2px 8px;
+      border-radius: 10px;
+      border: 1px solid rgba(212, 175, 55, 0.45);
+      z-index: 8;
+    }
+
+    .polaroid-caption {
+      margin-top: 5px;
+      font-size: 11px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      padding: 0 2px;
+      gap: 6px;
+    }
+
+    .polaroid-caption-text {
+      color: #4a0d1b;
+      font-weight: 600;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      flex: 1;
+      text-align: left;
+    }
+
+    .carousel-nav-btn {
+      position: absolute;
+      top: 44%;
+      transform: translateY(-50%);
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: rgba(45, 6, 16, 0.9);
+      color: var(--gold-light);
+      border: 1.5px solid var(--gold-primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 15px;
+      cursor: pointer;
+      z-index: 12;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.5);
+    }
+    .nav-prev { left: 10px; }
+    .nav-next { right: 10px; }
+
+    .thumb-dots-container {
+      display: flex;
+      gap: 4px;
+      justify-content: center;
+      align-items: center;
+      margin-top: 4px;
+      max-width: 92%;
+      flex-wrap: wrap;
+    }
+
+    .thumb-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: rgba(120, 16, 34, 0.25);
+      border: 1px solid rgba(120, 16, 34, 0.5);
+      cursor: pointer;
+    }
+
+    .thumb-dot.active {
+      width: 16px;
+      border-radius: 4px;
+      background: var(--crimson-royal);
+      border-color: var(--gold-primary);
+    }
+
+    /* CRISP READABLE STORY TEXT */
+    .story-text-container {
+      background: #ffffff;
+      border: 1px solid rgba(212, 175, 55, 0.45);
+      border-radius: 8px;
+      padding: 8px 11px;
+      max-height: 98px;
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
+      box-shadow: inset 0 1px 4px rgba(0,0,0,0.05);
+    }
+
+    .story-text {
+      font-size: 13px;
+      line-height: 1.58;
+      color: #1e0d11;
+      font-weight: 500;
+      text-align: justify;
+    }
+
+    .story-text::first-letter {
+      font-family: 'Galada', cursive;
+      font-size: 22px;
+      float: left;
+      margin-right: 5px;
+      line-height: 1;
+      color: var(--crimson-royal);
+    }
+
+    .page-footer-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 4px;
+      border-top: 1px dashed rgba(180, 140, 80, 0.45);
+      font-size: 10.5px;
+      color: var(--text-muted);
+    }
+
+    .page-footer-quote {
+      font-style: italic;
+      color: #7d3646;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 74%;
+    }
+
+    .page-number-text {
+      font-weight: 700;
+      color: var(--crimson-royal);
+      font-size: 11px;
+    }
+
+    .corner-turn-guide {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 34px;
+      height: 34px;
+      cursor: pointer;
+      z-index: 25;
+    }
+
+    .corner-turn-guide::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      border-width: 0 0 22px 22px;
+      border-style: solid;
+      border-color: transparent transparent rgba(212, 175, 55, 0.6) transparent;
+    }
+
+    /* LEFT-HAND PAGE */
+    .keepsake-back-style {
+      background: #f5ebd6;
+      background-image: linear-gradient(135deg, #fbf7ee 0%, #f4ead5 50%, #ebdec4 100%);
+      color: var(--text-dark);
+      padding: 12px 14px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+      border: 1.5px solid var(--parchment-border);
+      border-radius: 16px 6px 6px 16px;
+      overflow: hidden;
+    }
+
+    .keepsake-header-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 4px;
+      margin-bottom: 4px;
+      border-bottom: 1px dashed rgba(180, 140, 80, 0.45);
+    }
+
+    .keepsake-ch-badge {
+      font-family: 'Galada', cursive;
+      font-size: 15px;
+      color: var(--crimson-deep);
+    }
+
+    .keepsake-date-badge {
+      font-size: 10px;
+      color: #7d4427;
+      font-weight: 600;
+      background: rgba(212, 175, 55, 0.2);
+      padding: 2px 7px;
+      border-radius: 10px;
+    }
+
+    .keepsake-poem-box {
+      background: #ffffff;
+      border: 1px solid rgba(212, 175, 55, 0.5);
+      border-left: 3px solid var(--crimson-royal);
+      border-radius: 6px;
+      padding: 7px 10px;
+      margin-bottom: 6px;
+    }
+
+    .keepsake-poem-title {
+      font-family: 'Galada', cursive;
+      font-size: 14.5px;
+      color: var(--crimson-royal);
+      margin-bottom: 2px;
+    }
+
+    .keepsake-poem-lines {
+      font-size: 11.5px;
+      line-height: 1.52;
+      color: #2b1017;
+      font-style: italic;
+      margin-bottom: 4px;
+    }
+
+    .keepsake-micro-reflection {
+      font-size: 10px;
+      line-height: 1.4;
+      color: #5c333e;
+      border-top: 1px dotted rgba(212, 175, 55, 0.45);
+      padding-top: 3px;
+    }
+
+    .keepsake-footer-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 4px;
+      border-top: 1px dashed rgba(180, 140, 80, 0.4);
+      font-size: 10px;
+      color: #7a4b35;
+    }
+
+    .inside-cover-style {
+      background: radial-gradient(circle at 50% 40%, #5a0c1a 0%, #30040c 75%, #180206 100%);
+      color: #fff;
+      padding: 24px 18px;
+      border: 6px solid #200206;
+      outline: 2px solid var(--gold-primary);
+      outline-offset: -4px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      text-align: center;
+    }
+
+    .backface-mosaic-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 6px;
+      width: 100%;
+      flex: 1;
+      min-height: 0;
+      margin: 4px 0;
+    }
+
+    .mosaic-card {
+      background: #1c040b;
+      padding: 3px;
+      border-radius: 4px;
+      border: 1px solid rgba(212, 175, 55, 0.3);
+      overflow: hidden;
+      cursor: pointer;
+    }
+
+    .mosaic-card img { width: 100%; height: 100%; object-fit: contain; }
+
+    .keepsake-single-hero {
+      width: 100%;
+      flex: 1;
+      min-height: 0;
+      background: #1c040b;
+      padding: 6px 6px 12px 6px;
+      border-radius: 6px;
+      margin: 4px 0;
+      display: flex;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .keepsake-single-hero img { width: 100%; flex: 1; min-height: 0; object-fit: contain; }
+
+    /* SECRET PIN LOCK & FINAL LOVE LETTER */
+    .back-cover-style {
+      background: radial-gradient(circle at 50% 40%, #580a18 0%, #2e040c 75%, #150104 100%);
+      color: #fff;
+      padding: 16px 14px;
+      border: 6px solid #200206;
+      outline: 2px solid var(--gold-primary);
+      outline-offset: -4px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .pin-lock-container {
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 50% 30%, #4c0714 0%, #240309 85%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 10px;
+      z-index: 50;
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+
+    .pin-lock-container.unlocked {
+      opacity: 0;
+      transform: scale(0.92);
+      pointer-events: none;
+    }
+
+    .pin-card-inner {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1.5px solid var(--gold-primary);
+      border-radius: 14px;
+      padding: 12px 14px;
+      width: 100%;
+      max-width: 300px;
+      text-align: center;
+    }
+
+    .pin-lock-icon {
+      width: 38px; height: 38px; border-radius: 50%;
+      background: radial-gradient(circle, #b11f34, #6e0b19);
+      border: 2px solid var(--gold-light);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 18px; margin: 0 auto 4px auto;
+    }
+
+    .pin-title { font-family: 'Galada', cursive; font-size: 17px; color: var(--gold-light); margin-bottom: 2px; }
+    .pin-sub { font-size: 11px; color: #ffd8e2; margin-bottom: 8px; }
+
+    .pin-dots-display { display: flex; justify-content: center; gap: 10px; margin-bottom: 8px; }
+
+    .pin-dot-box {
+      width: 34px; height: 36px; border-radius: 6px;
+      background: rgba(0, 0, 0, 0.45);
+      border: 1.5px solid rgba(212, 175, 55, 0.55);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 18px; color: var(--gold-light); font-weight: bold;
+    }
+
+    .pin-dot-box.filled { border-color: var(--gold-light); background: rgba(120, 16, 34, 0.45); }
+    .pin-dot-box.error { border-color: #ff4d6d; animation: shakeDots 0.4s ease-in-out; }
+    @keyframes shakeDots { 0%, 100% { transform: translateX(0); } 25%, 75% { transform: translateX(-5px); } 50% { transform: translateX(5px); } }
+
+    .keypad-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 5px;
+      max-width: 220px;
+      margin: 0 auto;
+    }
+
+    .key-btn {
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(212, 175, 55, 0.4);
+      color: #fff;
+      font-size: 16px;
+      font-weight: 600;
+      height: 34px;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .letter-card {
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(212, 175, 55, 0.5);
+      border-radius: 10px;
+      padding: 14px 16px;
+      margin: 4px 0;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .wax-seal {
+      width: 40px; height: 40px; border-radius: 50%;
+      background: radial-gradient(circle, #b11f34, #6e0b19);
+      border: 2px solid var(--gold-light);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 18px; margin: 0 auto 4px auto;
+    }
+
+    .letter-title { font-family: 'Galada', cursive; font-size: 19px; color: var(--gold-light); text-align: center; margin-bottom: 4px; }
+    .letter-badge { text-align: center; font-size: 11px; color: #ffd2dc; margin-bottom: 8px; }
+
+    .letter-body {
+      font-size: 12.5px;
+      line-height: 1.65;
+      color: #fff5f7;
+      text-align: justify;
+      max-height: 280px;
+      overflow-y: auto;
+      padding-right: 4px;
+    }
+
+    /* BOTTOM BAR */
+    .bottom-bar {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      height: 44px;
+      padding: 4px 16px;
+      z-index: 25;
+      width: 100%;
+      max-width: 700px;
+      background: rgba(15, 2, 6, 0.65);
+      border-top: 1px solid rgba(212, 175, 55, 0.25);
+    }
+
+    .page-nav-arrow {
+      background: linear-gradient(135deg, #6e0d20, #38040e);
+      border: 1.5px solid var(--gold-primary);
+      color: var(--gold-light);
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 15px;
+      cursor: pointer;
+    }
+
+    .page-scrubber-box { display: flex; flex-direction: column; align-items: center; gap: 2px; flex: 1; max-width: 320px; }
+
+    .scrubber-slider {
+      width: 100%;
+      -webkit-appearance: none;
+      height: 5px;
+      border-radius: 3px;
+      background: rgba(255, 255, 255, 0.25);
+      outline: none;
+      cursor: pointer;
+    }
+
+    .scrubber-slider::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: var(--gold-light);
+      cursor: pointer;
+    }
+
+    .page-label-display { font-size: 11.5px; color: var(--gold-light); font-weight: 600; }
+
+    /* MODALS */
+    .toc-modal, .lightbox-modal {
+      position: fixed;
+      inset: 0;
+      background: rgba(8, 2, 4, 0.95);
+      z-index: 100;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 16px;
+    }
+    .toc-modal.active, .lightbox-modal.active { display: flex; }
+
+    .toc-content {
+      background: linear-gradient(135deg, #380713 0%, #1c0309 100%);
+      border: 2px solid var(--gold-primary);
+      border-radius: 14px;
+      width: 100%;
+      max-width: 580px;
+      max-height: 82vh;
+      overflow-y: auto;
+      padding: 18px;
+      position: relative;
+    }
+
+    .toc-title { font-family: 'Galada', cursive; font-size: 22px; color: var(--gold-light); text-align: center; margin-bottom: 12px; border-bottom: 1px dashed rgba(212, 175, 55, 0.35); padding-bottom: 8px; }
+    .toc-list { display: flex; flex-direction: column; gap: 8px; }
+
+    .toc-item {
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(212, 175, 55, 0.25);
+      border-radius: 8px;
+      padding: 8px 12px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      cursor: pointer;
+    }
+    .toc-item.current { background: rgba(212, 175, 55, 0.25); border-color: var(--gold-primary); }
+
+    .toc-item-left { display: flex; align-items: center; gap: 10px; }
+    .toc-item-num { width: 24px; height: 24px; border-radius: 50%; background: var(--crimson-royal); color: var(--gold-light); display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: bold; border: 1px solid var(--gold-light); }
+    .toc-item-title { font-size: 13px; color: #fff; }
+    .toc-item-meta { font-size: 10.5px; color: var(--gold-light); }
+    .toc-close-btn, .lightbox-close-btn { position: absolute; top: 12px; right: 16px; background: none; border: none; color: var(--gold-light); font-size: 24px; cursor: pointer; }
+
+    .lightbox-img-wrap {
+      position: relative;
+      max-width: 92vw;
+      max-height: 80vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #120205;
+      padding: 6px;
+      border-radius: 8px;
+      border: 2px solid var(--gold-primary);
+    }
+
+    .lightbox-img { max-width: 100%; max-height: 75vh; object-fit: contain; border-radius: 4px; }
+
+    .lightbox-nav-btn {
+      position: absolute; top: 50%; transform: translateY(-50%);
+      width: 40px; height: 40px; border-radius: 50%;
+      background: rgba(60, 10, 20, 0.9); border: 1px solid var(--gold-light);
+      color: var(--gold-light); font-size: 20px;
+      display: flex; align-items: center; justify-content: center;
+      cursor: pointer; z-index: 205;
+    }
+    .lightbox-prev { left: 16px; }
+    .lightbox-next { right: 16px; }
+
+    .lightbox-caption {
+      margin-top: 10px;
+      font-size: 12.5px;
+      color: var(--gold-light);
+      text-align: center;
+      max-width: 88%;
+      background: rgba(0,0,0,0.8);
+      padding: 5px 14px;
+      border-radius: 20px;
+      border: 1px solid rgba(212,175,55,0.45);
+    }
+
+        /* 100% PROMINENT, ULTRA-SMOOTH MOBILE VIEW (60 FPS) */
+    @media (max-width: 959px) {
+      :root {
+        --book-height: min(85dvh, calc(100dvh - 84px));
+        --book-width: min(94vw, 440px);
+      }
+
+      .book-container {
+        transform: none !important;
+        perspective: 2000px;
+        -webkit-perspective: 2000px;
+      }
+
+      .book-page {
+      -webkit-transform-style: preserve-3d;
+      transform-style: preserve-3d;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+      will-change: transform;
+        will-change: transform;
+        -webkit-transform-style: preserve-3d;
+        transform-style: preserve-3d;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+      }
+
+      .book-page.flipped {
+        opacity: 0;
+        pointer-events: none;
+        transition: transform 0.65s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.25s ease 0.15s;
+      }
+
+      header.app-header { height: 36px; padding: 2px 10px; }
+      .brand-title { font-size: 14px; }
+      .brand-seal { width: 26px; height: 26px; font-size: 13px; }
+      .control-btn span { display: none; }
+      .control-btn { padding: 4px 8px; }
+
+      .top-info-bar { height: 26px; padding: 0 8px; }
+      .milestone-badge-text { font-size: 10px; }
+
+      /* Clear, Prominent Story Styling on Mobile */
+      .story-page-style {
+        padding: 10px 12px 6px 12px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      .page-header-row { margin-bottom: 2px; }
+      .ch-badge { font-size: 11px; padding: 2px 8px; }
+      .ch-date-badge { font-size: 9.5px; }
+
+      .ch-title {
+        font-size: 16px;
+        line-height: 1.25;
+        margin-bottom: 4px;
+        font-weight: 700;
+      }
+
+      .photo-stage-wrapper {
+        margin: 2px 0;
+        flex-shrink: 0;
+      }
+
+      .polaroid-frame {
+        padding: 5px 5px 6px 5px;
+        margin-bottom: 2px;
+      }
+
+      .photo-viewport {
+        height: 205px;
+        max-height: 33vh;
+        border-radius: 4px;
+      }
+
+      .polaroid-caption {
+        margin-top: 3px;
+        font-size: 10.5px;
+      }
+
+      .photo-count-badge {
+        font-size: 10px;
+        padding: 2px 8px;
+        top: 6px;
+        right: 6px;
+      }
+
+      /* Story text container with generous room & large clear Bengali font */
+      .story-text-container {
+        background: #ffffff;
+        border: 1px solid rgba(212, 175, 55, 0.5);
+        border-radius: 8px;
+        padding: 8px 11px;
+        margin: 4px 0;
+        max-height: 130px;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+        flex: 1;
+        min-height: 0;
+      }
+
+      .story-text {
+        font-size: 13.5px;
+        line-height: 1.62;
+        color: #1a080d;
+        font-weight: 500;
+        text-align: left;
+      }
+
+      .story-text::first-letter {
+        font-size: 21px;
+        margin-right: 4px;
+      }
+
+      .page-footer-row {
+        padding-top: 2px;
+        font-size: 9.5px;
+      }
+
+      .bottom-bar { height: 38px; padding: 2px 10px; }
+      .page-nav-arrow { width: 32px; height: 32px; font-size: 14px; }
+    }
+
+    /* ===== নতুন সাজ: কাগজের টেক্সচার, ছবিতে ওয়াশি-টেপ, সোনালি শিরোনাম, তাল-চক্র ===== */
+    .story-page-style {
+      background-color: #faf5eb;
+      background-image:
+        linear-gradient(135deg, #fdfbf7 0%, #faf5eb 60%, #f0e4ce 100%);
+    }
+    .story-page-style::after, .keepsake-back-style::after {
+      content: ''; position: absolute; inset: 6px; pointer-events: none; border-radius: 4px;
+      border: 1px solid rgba(170, 133, 34, 0.38); z-index: 1;
+    }
+    .ch-title { background: linear-gradient(100deg, #4a0614 0%, #8a1228 45%, #4a0614 100%); -webkit-background-clip: text; background-clip: text; color: transparent; }
+    .polaroid-frame { transform: rotate(-0.7deg); box-shadow: 0 10px 24px rgba(60, 20, 20, 0.25); transition: box-shadow .45s ease; }
+    .polaroid-frame::before {
+      content: ''; position: absolute; top: -2px; left: 50%; width: 74px; height: 16px; transform: translateX(-50%) rotate(2deg);
+      background: repeating-linear-gradient(90deg, rgba(212,175,55,.55) 0 6px, rgba(247,226,156,.55) 6px 12px); border: 1px solid rgba(170,133,34,.4); z-index: 10; pointer-events: none;
+    }
+    .polaroid-frame.sam-pulse { box-shadow: 0 10px 24px rgba(60,20,20,.25), 0 0 0 3px rgba(212,175,55,.55), 0 0 26px rgba(212,175,55,.5); }
+    .cover-title {
+      background: linear-gradient(100deg, #b8902c 0%, #fff3bd 28%, #d4af37 50%, #fff3bd 72%, #b8902c 100%); background-size: 220% 100%;
+      -webkit-background-clip: text; background-clip: text; color: transparent; text-shadow: none; filter: drop-shadow(0 2px 5px rgba(0,0,0,.8));
+      animation: foilSweep 3.4s ease-out 1.2s 1 both;
+    }
+    @keyframes foilSweep { from { background-position: 100% 0; } to { background-position: 0 0; } }
+    .cover-mandala { box-shadow: 0 0 30px rgba(212,175,55,.35), inset 0 0 18px rgba(212,175,55,.25); }
+    .milestone-badge-text { flex: 1; min-width: 0; }
+    .music-meta { display: flex; align-items: center; gap: 6px; min-width: 0; max-width: 62%; }
+    .tal-chip { display: flex; align-items: center; gap: 5px; font-size: 10.5px; color: var(--gold-light); background: rgba(0,0,0,.45); border: 1px solid rgba(212,175,55,.4); border-radius: 12px; padding: 1px 8px 1px 3px; white-space: nowrap; flex-shrink: 0; }
+    .tal-chip svg { width: 22px; height: 22px; }
+    .td { fill: rgba(247,226,156,.28); transition: fill .08s, r .08s; }
+    .td.sam { fill: rgba(212,175,55,.65); }
+    .td.khali { fill: none; stroke: rgba(247,226,156,.6); stroke-width: .7; }
+    .td.on { fill: #fff3bd; filter: drop-shadow(0 0 2px #f7e29c); }
+    .current-music-pill { overflow: hidden; text-overflow: ellipsis; min-width: 0; }
+    button:focus-visible, .key-btn:focus-visible, input:focus-visible { outline: 2px solid var(--gold-light); outline-offset: 2px; }
+    @media (max-width: 959px) { .music-meta { max-width: 70%; } .current-music-pill { display: none; } .tal-chip { font-size: 10px; } }
+    @media (prefers-reduced-motion: reduce) { .cover-title { animation: none; } .polaroid-frame.sam-pulse { box-shadow: 0 10px 24px rgba(60,20,20,.25); } .petal-off { display: none; } }
+    .poem-btn { display: none; background: rgba(120,16,34,.1); border: 1px solid rgba(120,16,34,.4); color: var(--crimson-royal); border-radius: 10px; font-size: 11px; padding: 1px 8px; font-family: 'Hind Siliguri', sans-serif; cursor: pointer; }
+    @media (max-width: 959px) { .poem-btn { display: inline-block; } }
+  </style>
+</head>
+<body>
+
+  <canvas id="ambientCanvas"></canvas>
+
+  <div class="curtain-overlay" id="curtainOverlay">
+    <div class="curtain-left"><div class="curtain-fringe"></div></div>
+    <div class="curtain-right"><div class="curtain-fringe"></div></div>
+    
+    <div class="intro-center-card" id="introCard">
+      <div class="intro-seal">❤️</div>
+      <h1 class="intro-title">৭৩০ দিন: বেরুই থেকে জেজুর</h1>
+      <div class="intro-sub">আমাদের ২য় বিবাহবার্ষিকীর ৩ডি ডিজিটাল ফ্লিপবুক</div>
+      <div class="intro-date-badge">১লা অগ্রহায়ণ, ১৪৩৩ (১৭ নভেম্বর, ২০২৬)</div>
+      <br>
+      <button class="intro-tap-btn" id="openCurtainBtn">✨ Tap to Open Our Story ❤️ ✨</button>
+    </div>
+  </div>
+
+  <header class="app-header">
+    <div class="brand-container">
+      <div class="brand-seal">❤️</div>
+      <div class="brand-title">প্রসেনজিৎ • প্রিয়া • অদ্রিজিৎ (সোনা)</div>
+    </div>
+    <div class="header-controls">
+      <button class="control-btn" id="musicBtn" title="আবহ সঙ্গীত চালু/বন্ধ করুন">
+        <div class="eq-bars"><div class="eq-bar"></div><div class="eq-bar"></div><div class="eq-bar"></div></div>
+        <span id="musicBtnText">সঙ্গীত: চালু</span>
+      </button>
+      <button class="control-btn" id="tocBtn" title="সূচিপত্র দেখুন"><span>📑 সূচিপত্র</span></button>
+      <button class="control-btn" id="fsBtn" title="ফুলস্ক্রিন"><span>⛶</span></button>
+    </div>
+  </header>
+
+  <div class="top-info-bar">
+    <div class="milestone-badge-text">💍 ৭৩০ দিন একসাথে • ১লা অগ্রহায়ণ, ১৪৩৩ • বেরুই ➔ জেজুর</div>
+    <div class="music-meta"><div class="tal-chip" id="talChip"><svg id="talRing" viewBox="0 0 24 24" aria-hidden="true"></svg><span id="talName">তাল</span></div><div class="current-music-pill" id="musicPillBadge">🎵 সঙ্গীত</div></div>
+  </div>
+
+  <main class="book-stage">
+    <div class="book-container cover-view" id="bookContainer"></div>
+  </main>
+
+  <footer class="bottom-bar">
+    <button class="page-nav-arrow" id="prevPageBtn" title="পূর্ববর্তী পাতা">❮</button>
+    <div class="page-scrubber-box">
+      <input type="range" class="scrubber-slider" id="pageSlider" min="0" max="22" value="0">
+      <div class="page-label-display" id="pageIndicatorText">প্রচ্ছদ (পাতা ০ / ২২)</div>
+    </div>
+    <button class="page-nav-arrow" id="nextPageBtn" title="পরবর্তী পাতা">❯</button>
+  </footer>
+
+  <div class="toc-modal" id="poemModal">
+    <div class="toc-content" style="text-align:center">
+      <button class="toc-close-btn" onclick="document.getElementById('poemModal').classList.remove('active')">✕</button>
+      <div class="toc-title" id="poemTitle"></div>
+      <p id="poemLines" style="font-size:15px;line-height:1.9;color:#ffe8ee;font-style:italic;margin-bottom:12px"></p>
+      <p id="poemRef" style="font-size:12.5px;line-height:1.6;color:#f7e29c"></p>
+    </div>
+  </div>
+
+  <div class="toc-modal" id="tocModal">
+    <div class="toc-content">
+      <button class="toc-close-btn" id="tocCloseBtn">✕</button>
+      <div class="toc-title">📖 অধ্যায় সূচিপত্র</div>
+      <div class="toc-list" id="tocListContainer"></div>
+    </div>
+  </div>
+
+  <div class="lightbox-modal" id="lightboxModal">
+    <button class="lightbox-close-btn" id="lightboxCloseBtn">✕</button>
+    <button class="lightbox-nav-btn lightbox-prev" id="lbPrevBtn">❮</button>
+    <button class="lightbox-nav-btn lightbox-next" id="lbNextBtn">❯</button>
+    <div class="lightbox-img-wrap">
+      <img src="" alt="" class="lightbox-img" id="lightboxImg" onerror="onImgErr(this)">
+    </div>
+    <div class="lightbox-caption" id="lightboxCaption"></div>
+  </div>
+
+  <script>
+    const BOOK_DATA = [
+      {
+        type: 'cover',
+        title: "৭৩০ দিন: বেরুই থেকে জেজুর, অতঃপর আমরা তিনজন ❤️",
+        subtitle: "আমাদের ২য় বিবাহবার্ষিকীর ডিজিটাল ফ্লিপবুক | ১লা অগ্রহায়ণ, ১৪৩৩ (১৭ নভেম্বর, ২০২৬)",
+        names: "প্রসেনজিৎ • প্রিয়া (অনিন্দিতা) • আমাদের ছোট্ট 'সোনা' (অদ্রিজিৎ)",
+        btnText: "📖 গল্পের পাতা উল্টান (শুরু করুন)",
+        date: "১লা অগ্রহায়ণ, ১৪৩৩ (১৭ নভেম্বর, ২০২৬)",
+        musicTheme: "প্রচ্ছদ — রাজকীয় রোমান্টিক পিয়ানো",
+        musicScale: [261.63, 329.63, 392.00, 493.88, 523.25],
+        musicTimbre: "piano",
+        tempo: 650,
+        backTitle: "বেরুই থেকে জেজুর — ভালোবাসার অনন্ত গাথা",
+        backPoem: "হরিপালের শ্যামল মাটি, পাণ্ডুয়ার স্নিগ্ধ সুর,<br>হৃদয় দুটি মিলিয়ে দিয়ে ঘুচিয়ে দিল সকল দূর।<br>দুইটি বছর হাসিকান্নায়, দুটি বছর সুখে,<br>অদ্রিজিৎকে কোলে পেয়ে চাঁদ উঠেছে মুখে।",
+        backReflection: "শ্রী শ্রী রামকৃষ্ণ পরমহংসদেব ও মা সারদাদেবীর চরণে উৎসর্গীকৃত • প্রসেনজিৎ ও প্রিয়ার সুখী দাম্পত্যের ৭৩০ দিনের স্মারক।"
+      },
+      {
+        chapterNum: "১",
+        folder: "ch01_invitation",
+        title: "অধ্যায় ১: শুভ নিমন্ত্রণ — বেরুই থেকে জেজুরের মেলবন্ধন",
+        date: "সূত্রধর: ভায়া অভিজিৎ",
+        story: "হরিপাল ব্লকের জেজুর গ্রাম আর পাণ্ডুয়া ব্লকের বেরুই গ্রাম—দুটি আলাদা পরিবারকে এক সুতোয় বেঁধেছিলেন আমাদের অফিস কলিগ তথা প্রিয় ভায়া অভিজিৎ। প্রিয়া যেহেতু অভিজিৎ-এর মামার মেয়ে, তাই ভায়ার হাত ধরেই দেখাশোনা, আর এই বিয়ের কার্ডের হাত ধরেই আমাদের জীবনের নতুন অধ্যায়ের শুভ সূচনা।",
+        photos: [
+          { file: "card.jpg", caption: "💌 বেরুই থেকে জেজুর — আমাদের বিয়ের শুভ নিমন্ত্রণপত্র" }
+        ],
+        quote: "দুটি মন, দুটি পরিবার — মিলনের এক পবিত্র শুভলগ্ন",
+        musicTheme: "শুভ নিমন্ত্রণ — স্নিগ্ধ মোহন বাঁশির সুর",
+        musicScale: [293.66, 329.63, 369.99, 440.00, 493.88],
+        musicTimbre: "flute",
+        tempo: 620,
+        backTitle: "চিঠির খামে প্রেমের শুভ সূচনা",
+        backPoem: "এক টুকরো নিমন্ত্রণে লেখা হলো নাম,<br>বেরুই থেকে জেজুরে এলো মিলন-পয়গাম।<br>সহকর্মী ভায়ার হাত ধরে হলো দেখাশোনা,<br>ভাগ্যের সুতোয় বোনা হলো এক সোনার মোহনা।",
+        backReflection: "অভিজিৎ ভায়ার মধ্যস্থতায় দুটি গ্রামের ব্যবধান ঘুচে গিয়ে গড়ে উঠল আমাদের জীবনের শ্রেষ্ঠ অধ্যায়।"
+      },
+      {
+        chapterNum: "২ক",
+        folder: "ch02_pujo_2024",
+        title: "অধ্যায় ২ক: শারদীয়া দুর্গাপূজা ২০২৪ — শ্রীরামপুর, হুগলি",
+        date: "অক্টোবর, ২০২৪ | শ্রীরামপুর, হুগলি",
+        story: "আমাদের বিয়ের ঠিক আগের সেই সোনালি শরৎ! ২০২৪-এর দুর্গাপূজায় হুগলির শ্রীরামপুরের আলো ঝলমলে মণ্ডপে আমরা চারজন—প্রসেনজিৎ, প্রিয়া, ভায়া অভিজিৎ ও দোলন বৌদি—একসাথে মেতে উঠলাম প্যান্ডেল হপিং আর অফুরন্ত আড্ডায়।",
+        photos: [
+          { file: "durga1.jpg", caption: "🌸 শ্রীরামপুরের মণ্ডপে চারজনের একসাথে পুজোর আনন্দ" }
+        ],
+        quote: "বিয়ের আগের সোনালি শরৎ আর শ্রীরামপুরের প্যান্ডেল হপিং",
+        musicTheme: "শারদীয়া উৎসব — পুজো সানাই ও ঢাকের ছন্দ",
+        musicScale: [293.66, 369.99, 440.00, 587.33, 659.25],
+        musicTimbre: "shehnai",
+        tempo: 520,
+        backTitle: "শ্রীরামপুরের মণ্ডপে চার হৃদয়ের পুজো",
+        backPoem: "কাশফুলের নরম ছোঁয়া, ঢাকের মিষ্টি তাল,<br>বিয়ের আগের দুর্গাপূজোয় রঙিন সকাল-সাঁঝের কাল।<br>শ্রীরামপুরের আলোয় চারজনের হাসিমুখের মেলা,<br>আড্ডা, ফুচকা, ঘোরাঘুরি—স্মৃতির মায়াবী খেলা।",
+        backReflection: "প্রসেনজিৎ, প্রিয়া, ভায়া অভিজিৎ ও দোলন বৌদি—শ্রীরামপুরের রাজকীয় মণ্ডপে সেই অবিস্মরণীয় আড্ডা।"
+      },
+      {
+        chapterNum: "২খ",
+        folder: "ch02_pujo_2024",
+        title: "অধ্যায় ২খ: দীপাবলি ও কালীপূজা ২০২৪ — নৈহাটি",
+        date: "নভেম্বর, ২০২৪ | নৈহাটি (বড়মা দর্শন ও আলোর উৎসব)",
+        story: "দুর্গাপূজার রেশ কাটতে না কাটতেই কালীপূজার আলোর রোশনাইয়ে আমরা চারজন পৌঁছে গেলাম নৈহাটিতে! প্রদীপের আলো আর চারজনের হাসিমুখে বিয়ের আগের শেষ উৎসবটা হয়ে উঠল চিরস্মরণীয়।",
+        photos: [
+          { file: "kali1.jpg", caption: "🪔 নৈহাটিতে বড়মা দর্শন ও আলোর উৎসব" },
+          { file: "kali2.jpg", caption: "✨ চারজনের হাসিমুখ ও কালীপূজার স্মৃতি" },
+          { file: "kali3.jpg", caption: "🌟 আলোর রোশনাইয়ে বিয়ের আগের শেষ উৎসব" }
+        ],
+        quote: "নৈহাটির বড়মা দর্শন আর প্রদীপের সোনালি আলো",
+        musicTheme: "দীপাবলি উৎসব — শ্যামাসঙ্গীত ও আলোর রোশনাই",
+        musicScale: [261.63, 311.13, 392.00, 466.16, 523.25],
+        musicTimbre: "chimes",
+        tempo: 560,
+        backTitle: "নৈহাটির বড়মা ও আলোর রোশনাই",
+        backPoem: "প্রদীপের সোনালি শিখায় কাটল রাতের আঁধার,<br>বড়মার চরণে সঁপে দিলাম নতুন সংসার বাঁধার ভার।<br>বিয়ের আগের শেষ উৎসবে নৈহাটির সেই রাত,<br>হাতে হাত রেখে অনুভব হলো আজীবনের এক সাথ।",
+        backReflection: "বড়মার স্নেহাশীষে আমাদের ভবিষ্যৎ জীবন যেন প্রদীপের স্নিগ্ধ শিখার মতো সদা আলোকিত থাকে।"
+      },
+      {
+        chapterNum: "৩ক",
+        folder: "ch03_amader_biye",
+        title: "অধ্যায় ৩ক: শুভ রেজিস্ট্রি বিবাহ — আইনি বন্ধনে এক হওয়া",
+        date: "১৫ নভেম্বর, ২০২৪",
+        story: "১৫ নভেম্বর, ২০২৪—আইনি বন্ধনে আমাদের জীবনের শুভ রেজিস্ট্রি বিবাহ সম্পন্ন হলো। দুটি মন আনুষ্ঠানিকভাবে আইনি স্বাক্ষরের মাধ্যমে এক বন্ধনে আবদ্ধ হওয়ার সেই রোমাঞ্চকর প্রথম দিন।",
+        photos: [
+          { file: "reg1.jpg", caption: "✍️ আইনি বন্ধনে শুভ স্বাক্ষর — আমাদের রেজিস্ট্রি" },
+          { file: "reg2.jpg", caption: "💍 মালাবদল ও মিষ্টি বিনিময়" },
+          { file: "reg3.jpg", caption: "💖 দুই পরিবারের উপস্থিতিতে আইনি বিবাহ সম্পন্ন" },
+          { file: "reg4.jpg", caption: "✨ রেজিস্ট্রি শেষে নবদম্পতির প্রথম মিষ্টি হাসি" }
+        ],
+        quote: "আইনের শুভ স্বাক্ষরে আজীবনের সঙ্গিনী",
+        musicTheme: "রেজিস্ট্রি — মিষ্টি ভালোবাসার সুর",
+        musicScale: [261.63, 293.66, 329.63, 392.00, 440.00],
+        musicTimbre: "piano",
+        tempo: 620,
+        backTitle: "কলমের কালিতে চিরন্তন অঙ্গীকার",
+        backPoem: "একটি সইয়ের ছোঁয়ায় বদলাল জীবনের পরিচয়,<br>আইনের পাতায় স্বীকৃতি পেল আমাদের নীরব প্রণয়।<br>তোমার নামের পাশে আমার নাম লিখলাম সেদিন,<br>কাগজের গণ্ডি ছাড়িয়ে প্রেম হলো চির-অম্লান, অন্তহীন।",
+        backReflection: "১৫ নভেম্বর ২০২৪—যেদিন সমাজ ও আইনের সানন্দ সম্মতিতে প্রিয়া আইনত আমার জীবনের অংশ হলো।"
+      },
+      {
+        chapterNum: "৩খ",
+        folder: "ch03_amader_biye",
+        title: "অধ্যায় ৩খ: ১লা অগ্রহায়ণ — সাতপাকে শুভ বিবাহ",
+        date: "১৭ নভেম্বর, ২০২৪",
+        story: "১লা অগ্রহায়ণের সেই মাহেন্দ্রক্ষণে শঙ্খধ্বনি আর উলুধ্বনিতে মুখরিত হয়ে উঠল বেরুইয়ের বাপের বাড়ি। বৈদিক মন্ত্রোচ্চারণ, শুভদৃষ্টি, মালাবদল আর আগুনের সাক্ষী রেখে সাতপাকে বাঁধা পড়ল আমাদের দুটি জীবন। সকল মাঙ্গলিক নিয়ম শেষে রাতে বাসর ঘরে প্রিয়ার হাতে বড় মাছের মুড়ো খাওয়ার ভোজ আর চারপাশের অফুরন্ত হাসির স্মৃতি আজও মনে অমলিন হয়ে আছে।",
+        photos: [
+          { file: "biye1.JPG", caption: "🔥 সাতপাক ও অগ্নিকুণ্ডকে সাক্ষী রেখে বিবাহ" },
+          { file: "biye2.JPG", caption: "🌺 শুভদৃষ্টি ও মালাবদলের সেই পবিত্র লগ্ন" },
+          { file: "biye3.jpg", caption: "👰 সিঁদুরদান — অনন্তকালের ভালোবাসার অঙ্গীকার" },
+          { file: "biye4.jpg", caption: "🐟 বিয়ের আচার শেষে রাতে নবদম্পতির একসঙ্গে ভোজ — মাছের মুড়ো খাওয়ার মিষ্টি মুহূর্ত!" }
+        ],
+        quote: "সাতপাকে বাঁধা দুটি প্রাণ — উলুধ্বনি ও মালাবদল",
+        musicTheme: "শুভ বিবাহ — সানাইয়ের সুরে সাতপাক",
+        musicScale: [293.66, 329.63, 369.99, 440.00, 587.33],
+        musicTimbre: "shehnai",
+        tempo: 520,
+        backTitle: "অগ্নিসাক্ষী সাতপাক ও বাসর ভোজ",
+        backPoem: "শঙ্খধ্বনি, উলুর রোলে মুখরিত সেই লগ্ন,<br>সাতপাকের মন্ত্রে দুটি হৃদয় ভালোবাসায় মগ্ন।<br>সিঁথিতে সিঁদুর, রাতে বাসর জাগা মিষ্টি খাওয়া,<br>তোমার সাথে জীবন কাটানোই আমার শ্রেষ্ঠ পাওয়া।",
+        backReflection: "১লা অগ্রহায়ণ, ১৪৩১—অগ্নিকে প্রদক্ষিণ করে আজীবনের জন্য প্রিয়াকে নিজের করে নেওয়া এবং বিয়ের আনন্দের সমাপ্তি ভোজ।"
+      },
+      {
+        chapterNum: "৩গ",
+        folder: "ch03_amader_biye",
+        title: "অধ্যায় ৩গ: ৩রা অগ্রহায়ণ — আনন্দময় বৌভাত ও জেজুরে নতুন পথচলা",
+        date: "১৯ নভেম্বর, ২০২৪ | জেজুর",
+        story: "১৯ নভেম্বর, ২০২৪ (৩রা অগ্রহায়ণ)—জেজুরের বাড়িতে অনুষ্ঠিত হলো আমাদের আনন্দময় বৌভাত। প্রিয়ার নতুন সংসারে প্রথম পা রাখা, পরিবারের সকলের উষ্ণ বরণ আর নতুন জীবনের সোনালি সূচনা।",
+        photos: [
+          { file: "boubhat1.jpg", caption: "👑 ৩রা অগ্রহায়ণ: জেজুরে আমাদের বৌভাত ও বধূবরণ" }
+        ],
+        quote: "জেজুরে বধূবরণ ও নতুন নীড়ের সোনালি সূচনা",
+        musicTheme: "বৌভাত — আনন্দময় সানাই ও উৎসব",
+        musicScale: [261.63, 329.63, 392.00, 523.25, 659.25],
+        musicTimbre: "shehnai",
+        tempo: 530,
+        backTitle: "জেজুরের বধূবরণ ও গৃহলক্ষ্মী",
+        backPoem: "দুধে-আলতায় পা ডুবিয়ে এলে জেজুরের নীড়ে,<br>এক লহমায় আপন হলে নতুন পরিবারের ভিড়ে।<br>বৌভাতের রাজবেশে তুমি অপ্সরী রূপসী অনন্যা,<br>আমাদের একান্নবর্তী ভিটের আদরের গৃহকন্যা।",
+        backReflection: "১৯ নভেম্বর ২০২৪—জেজুরে প্রিয়ার প্রথম পা ফেলা, নতুন সংসারকে আপন করে নেওয়ার সোনালি সূচনা।"
+      },
+      {
+        chapterNum: "৪",
+        folder: "ch03b_first_guest",
+        title: "অধ্যায় ৪: নবদম্পতি হিসেবে প্রথম নিমন্ত্রণ রক্ষা",
+        date: "ডিসেম্বর, ২০২৪",
+        story: "বিয়ের পরপরই নতুন বর-বউ সেজে একসাথে প্রথম বিয়েবাড়ি এটেন্ড করা! নতুন সংসারের সেই মিষ্টি লজ্জা, সাজগোজ আর পাশাপাশি হাত ধরে হাঁটার প্রথম সামাজিক মুহূর্ত।",
+        photos: [
+          { file: "IMG-20241130-WA0023.jpg", caption: "👫 বর-বউয়ের নতুন সাজে প্রথম নিমন্ত্রণ যাত্রা" },
+          { file: "guest2.jpg", caption: "💖 মিষ্টি লজ্জা আর হাত ধরে পাশাপাশি হাঁটা" },
+          { file: "IMG-20241130-WA0024.jpg", caption: "✨ প্রথম নিমন্ত্রণে সবার উষ্ণ শুভেচ্ছা ও ভালোবাসা" },
+          { file: "IMG-20241130-WA0027.jpg", caption: "🌸 নবদম্পতির রূপ ও সবার আশীর্বাদ" }
+        ],
+        quote: "নবদম্পতির প্রথম সামাজিক পথচলা",
+        musicTheme: "প্রথম নিমন্ত্রণ — আনন্দময় মধুর বাঁশি",
+        musicScale: [293.66, 329.63, 392.00, 440.00, 523.25],
+        musicTimbre: "flute",
+        tempo: 600,
+        backTitle: "হাত ধরে নবদম্পতির প্রথম পদচারণা",
+        backPoem: "নতুন সাজে নবদম্পতি, সাথে আত্মীয়ের আদর,<br>যেখানেই যাই, সবার চোখে স্নেহের অমল চাদর।<br>পাশাপাশি দুটি হাত রেখে পথচলার প্রথম গান,<br>তোমার চোখের গভীর হাসিতে জুড়িয়ে যায় মন-প্রাণ।",
+        backReflection: "বিয়ের পর আত্মীয়স্বজনের বাড়ি প্রথম নিমন্ত্রণ—সবার আশীর্বাদে শুরু হলো যৌথ জীবনের মিষ্টি গল্প।"
+      },
+      {
+        chapterNum: "৫",
+        folder: "ch04_vizag",
+        title: "অধ্যায় ৫: সমুদ্র থেকে পাহাড়ের পথে — ভাইজাগ ও আরাকু ভ্যালি হানিমুন",
+        date: "৩১ ডিসেম্বর ২০২৪ – ৬ জানুয়ারি ২০২৫",
+        story: "৩১শে ডিসেম্বরের রাতের ট্রেনে যাত্রা শুরু করে ১লা জানুয়ারি, ২০২৫-এর ভোরে ভাইজাগ সি-বিচে নতুন বছরের প্রথম সূর্যোদয় দেখা, সিংহাচলম মন্দিরে আশীর্বাদ নেওয়া, আর পাহাড়ি পথ পেরিয়ে আরাকু ভ্যালি ও বোরা কেভসের (Borra Caves) রোমাঞ্চকর সফর—আমাদের প্রথম হানিমুনের এক রঙিন ভ্রমণকাহিনী।",
+        photos: [
+          { file: "train1.jpg", caption: "🚆 ৩১ ডিসেম্বর ২০২৪: ভাইজাগের উদ্দেশ্যে রাতের ট্রেনে যাত্রা শুরু" },
+          { file: "vizag1.jpg", caption: "🌊 ১লা জানুয়ারি ২০২৫: ভাইজাগ সি-বিচে নতুন বছরের প্রথম সূর্যোদয়" },
+          { file: "vizag1a.jpg", caption: "🌊 ভাইজাগের বালুকাবেলায় সমুদ্রের ফেনিল ঢেউয়ের ছোঁয়া" },
+          { file: "vizag2.jpg", caption: "🌊 বিশাখাপত্তনম সমুদ্রসৈকতে পাশাপাশি হাত ধরে হাঁটা" },
+          { file: "vizag3.jpg", caption: "🌊 নীল সমুদ্রের উত্তাল ঢেউ আর দুজনার অপার্থিব মুহূর্ত" },
+          { file: "vizag4.jpg", caption: "🛕 সিংহাচলম মন্দির (Simhachalam Temple) — পুণ্য দর্শন ও আশীর্বাদ" },
+          { file: "vizag5.jpg", caption: "🛕 শ্রী বরহলক্ষ্মী নৃসিংহ স্বামী দর্শন — পুণ্যতীর্থের পুণ্যস্মৃতি" },
+          { file: "araku1.jpg", caption: "🦇 বোরা কেভস (Borra Caves)-এর প্রাচীন প্রাকৃতিক চুনাপাথরের গুহা" },
+          { file: "araku2.jpg", caption: "⛰️ আরাকু উপত্যকা (Araku Valley) — সবুজ পাহাড় ও কফি বাগানের কোলে" },
+          { file: "araku3.jpg", caption: "🚉 বোররা গুহালু (Borra Guhalu) পাহাড়ি রেলওয়ে স্টেশন" },
+          { file: "araku4.jpg", caption: "⛰️ কফি প্ল্যান্টেশন ও উপত্যকার পাহাড়ি পথের অপূর্ব সৌন্দর্য" },
+          { file: "araku5.jpg", caption: "⛰️ ভাইজাগ থেকে আরাকু — হানিমুনের সেরা স্মরণীয় সফর" }
+        ],
+        quote: "সমুদ্রের বিশালতা আর আরাকুর সবুজ পাহাড়",
+        musicTheme: "হানিমুন — সমুদ্রের ঢেউ ও রোমান্টিক গিটার",
+        musicScale: [220.00, 261.63, 329.63, 392.00, 440.00],
+        musicTimbre: "guitar",
+        tempo: 580,
+        backTitle: "সিংহাচলমের পুণ্যতীর্থ ও আরাকুর পাহাড়",
+        backPoem: "ভাইজাগের উত্তাল ঢেউয়ে পা ভিজিয়ে হেঁটে চলা,<br>সিংহাচলম মন্দিরে বসে মনের কথা বলা।<br>বোররা গুহালু স্টেশনে ট্রেনের বাঁশি, কুয়াশার ভোর,<br>তোমার চোখের শান্ত দিঘিতে বাঁধা প্রেমের ডোর।",
+        backReflection: "সমুদ্রের ফেনিল ঢেউ, সিংহাচলমের পবিত্র মন্দির আর বোররা গুহালুর পাহাড়ি ট্রেন—আমাদের প্রথম ভ্রমণের প্রতিটি পলক জীবন্ত।"
+      },
+      {
+        chapterNum: "৬",
+        folder: "ch05_abhijit_biye",
+        title: "অধ্যায় ৬: ভায়া অভিজিৎ ও দোলন বৌদির শুভ বিবাহ",
+        date: "ফেব্রুয়ারি, ২০২৫",
+        story: "যাঁর হাত ধরে আমাদের এই মিলন, সেই প্রিয় ভায়া অভিজিৎ ও দোলন বৌদির শুভ বিবাহ! তাঁদের এই বিশেষ দিনে আমরা দুজন পরম আনন্দে অংশ নিয়েছিলাম।",
+        photos: [
+          { file: "IMG-20250218-WA0027.jpg", caption: "💐 ভায়া অভিজিৎ ও দোলন বৌদির বিয়ের শুভ লগ্ন" },
+          { file: "IMG-20250218-WA0034.jpg", caption: "❤️ সূত্রধরের শুভ পরিণয়ে আমাদের সানন্দ উপস্থিতি" },
+          { file: "abhijit3.jpg", caption: "✨ আত্মীয়তার নতুন মেলবন্ধন ও মধুর স্মৃতি" },
+          { file: "IMG-20250218-WA0051.jpg", caption: "🎉 বিয়ের আনন্দের আসরে চারজনের অফুরন্ত আড্ডা" }
+        ],
+        quote: "আমাদের ঘটকের শুভ পরিণয়ে সানন্দ উপস্থিতি",
+        musicTheme: "শুভ বিবাহ — সানাই ও আনন্দ সঙ্গীত",
+        musicScale: [293.66, 369.99, 440.00, 587.33, 659.25],
+        musicTimbre: "shehnai",
+        tempo: 520,
+        backTitle: "সূত্রধরের বিবাহবাসরে কৃতজ্ঞ প্রণতি",
+        backPoem: "যে মানুষটি মিলিয়েছিল আমাদের দুটি হাত,<br>তাঁরই শুভলগ্নে আমরা হাজির, পেয়ে খুশির সাথ।<br>অভিজিৎ আর দোলনের হাসিমুখ সাজাল শুভ বাসর,<br>বন্ধুত্ব আর সম্পর্কের মিলনে জমল বিয়ের আসর।",
+        backReflection: "আমাদের মিলনের সূত্রধর অভিজিৎ ভায়ার শুভ পরিণয়ে প্রসেনজিৎ ও প্রিয়ার সানন্দ উপস্থিতি।"
+      },
+      {
+        chapterNum: "৭",
+        folder: "ch06_prega_kit",
+        title: "অধ্যায় ৭: জীবনের সেরা সুখবর ও নতুন অপেক্ষার শুরু!",
+        date: "৬ মার্চ, ২০২৫",
+        story: "৬ মার্চ, ২০২৫—প্রেগা কিটের সেই দুটি ম্যাজিকাল দাগ! আমাদের জীবনে আসতে চলেছে এক নতুন অতিথি। প্রথম ডক্টর ভিজিট, নতুন প্রাণের মিষ্টি স্পন্দন আর হবু মায়ের পুষ্টিকর খাদ্য ও তেলের বিশেষ যত্ন নেওয়ার সেই স্বর্গীয় দিনগুলি শুরু হলো।",
+        photos: [
+          { file: "1.jpeg", caption: "🎉 ৬ মার্চ, ২০২৫: প্রেগা কিটে জীবনের সেরা সুখবর — দুটি গোলাপি দাগ!" },
+          { file: "2.jpg", caption: "🩺 প্রথম ডক্টর ভিজিট — নতুন প্রাণের মিষ্টি হৃদস্পন্দন শোনার শুরু" },
+          { file: "3.jpg", caption: "🌿 হবু মায়ের জন্য পুষ্টিকর খাদ্য ও তেলের বিশেষ যত্ন" }
+        ],
+        quote: "দুটি গোলাপি রেখা — বাবা-মা হওয়ার স্বর্গীয় সুখবর",
+        musicTheme: "নতুন অতিথি — আনন্দ চিলড্রেন মেলোডি",
+        musicScale: [261.63, 329.63, 392.00, 523.25, 659.25],
+        musicTimbre: "celesta",
+        tempo: 620,
+        backTitle: "দুটি গোলাপি রেখা ও মাতৃত্বের যত্ন",
+        backPoem: "প্রেগা-কিটের দুটি রেখায় ফুটে উঠল অপার বিস্ময়,<br>তোমার চোখে খুশির অশ্রু, আমার বুকে প্রেমের উদয়।<br>হবু মায়ের তেল ও খাবারের ভালোবাসাভরা যত্ন নেওয়া,<br>ভগবানের কাছে এক নতুন প্রাণ চেয়ে নেওয়ার মিষ্টি পাওয়া।",
+        backReflection: "৬ মার্চ ২০২৫—যেদিন প্রথম জানলাম আমাদের ঘরে নতুন অতিথি আসছে, আর শুরু হলো প্রিয়ার পরম যত্নের দিনগুলি।"
+      },
+      {
+        chapterNum: "৮",
+        folder: "ch07_bishnupur",
+        title: "অধ্যায় ৮: টেরাকোটার শহরে ভালোবাসার সফর — বিষ্ণুপুর",
+        date: "এপ্রিল, ২০২৫",
+        story: "ইতিহাস ও স্থাপত্যের শহর বিষ্ণুপুরে আমাদের এক সুন্দর সফর। মল্ল রাজাদের প্রাচীন টেরাকোটার শিল্প আর লাল মাটির পথে ভালোবাসার সুন্দর স্মৃতি।",
+        photos: [
+          { file: "IMG20250222150704.jpg", caption: "🏛️ বিষ্ণুপুরের প্রাচীন টেরাকোটা মন্দিরে আমাদের ভালোবাসার সফর" }
+        ],
+        quote: "পোড়ামাটির মন্দিরে মন্দিরে প্রেমের পদচিহ্ন",
+        musicTheme: "বিষ্ণুপুর — ক্লাসিকাল ও ঐতিহ্যবাহী সুর",
+        musicScale: [220.00, 261.63, 293.66, 329.63, 392.00],
+        musicTimbre: "flute",
+        tempo: 630,
+        backTitle: "টেরাকোটার মন্দিরে মাতৃত্বের পরশ",
+        backPoem: "মল্ল রাজাদের প্রাচীন নগরী, লাল মাটির দেশ,<br>পোড়ামাটির মন্দিরে মন্দিরে ইতিহাসের আবেশ।<br>গর্ভের ছোট্ট সন্তানকে নিয়ে ভালোবাসার এই সফর,<br>বিষ্ণুপুরের স্থাপত্যের মাঝে রচিত সুখের ঘর।",
+        backReflection: "মদনমোহন ও রসিক শিরোমণি মন্দিরের ছায়ায় প্রিয়ার গর্ভকালীন স্নিগ্ধ রূপ আজও মনে ভাসে।"
+      },
+      {
+        chapterNum: "৯",
+        folder: "ch07b_shashthi_2025",
+        title: "অধ্যায় ৯: প্রথম জামাইষষ্ঠী — বেরুইয়ে দুজনার মিষ্টি ঘোরাঘুরি",
+        date: "জুন, ২০২৫ | বেরুই",
+        story: "বিয়ের পর শ্বশুরবাড়িতে (বেরুই) প্রথম জামাইষষ্ঠী! উৎসবের আনন্দে দুজনে মিলে বেরুইয়ের সবুজ পথে ও আশেপাশে ঘুরে বেড়ানোর মিষ্টি মুহূর্ত। তখন আমাদের দুজনের মাঝে ছোট্ট সোনার আসার প্রতীক্ষা চলছে।",
+        photos: [
+          { file: "IMG20250601183203.jpg", caption: "🌿 প্রথম জামাইষষ্ঠীতে বেরুইয়ে দুজনার মিষ্টি ঘোরাঘুরি" },
+          { file: "IMG20250601184015.jpg", caption: "💖 ছোট্ট সোনার আগমনের প্রতীক্ষায় সোনালি বিকেল" }
+        ],
+        quote: "বেরুইয়ে প্রথম জামাইষষ্ঠী ও দুজনার একান্ত ঘোরাঘুরি",
+        musicTheme: "জামাইষষ্ঠী — আনন্দময় পারিবারিক সুর",
+        musicScale: [261.63, 293.66, 329.63, 392.00, 440.00],
+        musicTimbre: "piano",
+        tempo: 600,
+        backTitle: "বেরুইয়ের পথে দুজনার সোনালি বিকেল",
+        backPoem: "জামাইষষ্ঠীর আনন্দে মুখর বেরুইয়ের চারিধার,<br>হাতে হাত রেখে ঘুরে বেড়ানো—ভালোবাসার উপহার।<br>তোমার জন্মভিটের সবুজ পথে হাঁটার মিষ্টি সুর,<br>ছোট্ট সোনার অপেক্ষায় মন আনন্দে ভরপুর।",
+        backReflection: "প্রথম জামাইষষ্ঠীতে বেরুইয়ে দুজনার একসাথে ঘুরে বেড়ানোর স্নিগ্ধ স্মৃতি।"
+      },
+      {
+        chapterNum: "১০",
+        folder: "ch09_sadh",
+        title: "অধ্যায় ১০: প্রিয়ার সাধভক্ষণ — মাতৃত্বের উৎসব",
+        date: "অক্টোবর, ২০২৫ | জেজুর ও বেরুই",
+        story: "প্রিয়ার সাধভক্ষণ অনুষ্ঠান। পঞ্চব্যঞ্জন দিয়ে সাজানো থালা, নতুন শাড়িতে প্রিয়ার মাতৃত্বের অপার সৌন্দর্য, আর দুই পরিবারের বড়দের স্নেহ ও আন্তরিক আশীর্বাদ।",
+        photos: [
+          { file: "IMG20251031111229.jpg", caption: "🌺 পঞ্চব্যঞ্জনে সাজানো থালা ও প্রিয়ার সাধের পবিত্র আনন্দ" }
+        ],
+        quote: "মাতৃত্বের পূর্ণতা ও পঞ্চব্যঞ্জনে সাধের আশীর্বাদ",
+        musicTheme: "সাধভক্ষণ — শান্ত স্নেহময় বাঁশির রাগ",
+        musicScale: [293.66, 329.63, 369.99, 440.00, 493.88],
+        musicTimbre: "flute",
+        tempo: 640,
+        backTitle: "পঞ্চব্যঞ্জনে মাতৃত্বের দেবীরূপ",
+        backPoem: "লাল বেনারসী, মাথায় মুকুট, মুখে মাতৃত্বের আভা,<br>থালা ভরা পঞ্চব্যঞ্জনে ফুটে উঠল স্নেহের শোভা।<br>মা-কাকিমাদের আশিস ঝরে অনাগত সোনার তরে,<br>নতুন অতিথি আসার ক্ষণ বাজল প্রতি ঘরে ঘরে।",
+        backReflection: "জেজুর ও বেরুই—দুই পরিবারের আশীর্বাদে মা হতে চলা প্রিয়ার মুখে দেবীর স্বর্গীয় আলো।"
+      },
+      {
+        chapterNum: "১১",
+        folder: "ch10_anniv_night",
+        title: "অধ্যায় ১১: ১ম বিবাহবার্ষিকীর সেই রোমাঞ্চকর রাত",
+        date: "১৭ নভেম্বর, ২০২৫",
+        story: "১৭ নভেম্বর, ২০২৫—আমাদের প্রথম বিবাহবার্ষিকী! কেক কেটে মোমবাতি নিভিয়ে সেলিব্রেট করতে করতেই প্রিয়ার প্রসববেদনা শুরু হলো। আনন্দ আর উৎকণ্ঠার দোলাচলে মধ্যরাতে চুঁচুড়া হাসপাতালের উদ্দেশ্যে রওনা—জীবনের অন্যতম স্মরণীয় রাত!",
+        photos: [
+          { file: "anniv1.jpg", caption: "🎂 ১ম বিবাহবার্ষিকীর কেক কাটার মধুর স্মৃতি" },
+          { file: "anniv2.jpg", caption: "🏥 মধ্যরাতে চুঁচুড়া হাসপাতালের উদ্দেশ্যে রোমাঞ্চকর যাত্রা" }
+        ],
+        quote: "কেক কাটা থেকে হাসপাতালে মধ্যরাতের রুদ্ধশ্বাস যাত্রা",
+        musicTheme: "বিবাহবার্ষিকী রাত — রোমাঞ্চ ও আবেগঘন সুর",
+        musicScale: [261.63, 311.13, 349.23, 392.00, 466.16],
+        musicTimbre: "piano",
+        tempo: 620,
+        backTitle: "কেক কাটা থেকে মধ্যরাতে হাসপাতালের পথ",
+        backPoem: "বিবাহবার্ষিকীর মোমবাতি নিভল, কাটল মিষ্টি কেক,<br>আনন্দের মাঝেই এল নতুন জীবনের প্রসববেদনা এক!<br>উদ্বেগ আর রোমাঞ্চে ভরা চুঁচুড়া যাওয়ার রাত,<br>প্রিয়ার কষ্টের সাথী হয়ে শক্ত করে ধরা হাত।",
+        backReflection: "১ম বিবাহবার্ষিকীর রাত—কেকের মিষ্টতা মুহূর্তে বদলে গেল সন্তানের আগমনের রোমাঞ্চকর প্রতীক্ষায়।"
+      },
+      {
+        chapterNum: "১২",
+        folder: "ch11_sona_birth",
+        title: "অধ্যায় ১২: আমাদের 'সোনা'র আগমন — অদ্রিজিৎ",
+        date: "১৮ নভেম্বর, ২০২৫ (৩রা অগ্রহায়ণ, ১৪৩২)",
+        story: "১৮ নভেম্বর, ২০২৫—আমাদের ঘরে এলো পৃথিবীর শ্রেষ্ঠ আলো! ঠিক আমাদের বৌভাতের একই তিথিতে (৩রা অগ্রহায়ণ) জন্ম নিল আমাদের নয়নমণি অদ্রিজিৎ (সোনা)। দুজন থেকে আমরা হলাম তিনজন—পূর্ণ হলো আমাদের সংসার।",
+        photos: [
+          { file: "sona1.jpg", caption: "👶 ১৮ নভেম্বর ২০২৫: ভোরে জন্ম নিল আমাদের নয়নমণি অদ্রিজিৎ (সোনা)" },
+          { file: "sona2.jpg", caption: "🍼 ছোট্ট তুলতুলে রাজপুত্রের প্রথম ঘুম" },
+          { file: "sona3.jpg", caption: "❤️ বাবার হাতের আলতো স্পর্শে একরত্তি সোনা" },
+          { file: "sona4.jpg", caption: "🏥 হাসপাতালে ১ম দিন — মা ও ছেলের প্রথম পবিত্র স্পর্শ ও স্নেহের কোল" }
+        ],
+        quote: "৩রা অগ্রহায়ণের শুভ তিথিতে কোল আলো করে এলো সোনা",
+        musicTheme: "সোনার জন্ম — স্বর্গীয় আনন্দ ও মিষ্টি ঘুমপাড়ানি গান",
+        musicScale: [261.63, 329.63, 392.00, 523.25, 659.25],
+        musicTimbre: "celesta",
+        tempo: 650,
+        backTitle: "হাসপাতালে মা-ছেলের মিলন ও নতুন ভোর",
+        backPoem: "১৮ নভেম্বর ভোরে এলো পৃথিবীর শ্রেষ্ঠ উপহার,<br>বৌভাতের একই তিথিতে ফুটল চাঁদের আঁধার।<br>হাসপাতালে ১ম দিন প্রিয়ার কোলে ঘুমন্ত মানিক,<br>আমাদের কোল আলো করে এলো অদ্রিজিৎ ধার্মিক।",
+        backReflection: "১৮ নভেম্বর ২০২৫—ঠিক আমাদের বৌভাতের তিথিতে জন্ম নিয়ে সোনা আমাদের জীবনকে ধন্য করল।"
+      },
+      {
+        chapterNum: "১৩",
+        folder: "ch14_hajra_2026",
+        title: "অধ্যায় ১৩: সোনার হাজরা অনুষ্ঠান — ভালোবাসা ও আশীর্বাদ",
+        date: "২৬ নভেম্বর, ২০২৫ | জেজুর",
+        story: "১৮ নভেম্বর আমাদের সোনা জন্ম নেওয়ার ঠিক ৮ দিন পর, ২৬ নভেম্বর ২০২৫-এ জেজুরে অনুষ্ঠিত হলো তার পবিত্র হাজরা অনুষ্ঠান। গ্রামের মঙ্গলকামনায় কুলদেবতার চরণে পুত্রের দীর্ঘায়ু ও সুস্থ জীবন প্রার্থনা করে আত্মীয়-স্বজন ও প্রতিবেশীদের অফুরন্ত আশীর্বাদে ধন্য হলো আমাদের ছোট্ট অদ্রিজিৎ।",
+        photos: [
+          { file: "hajra1.jpg", caption: "🙏 ২৬ নভেম্বর, ২০২৫: সোনার পবিত্র হাজরা অনুষ্ঠান" }
+        ],
+        quote: "সোনার হাজরা উৎসব ও পরিবারের অন্তহীন শুভাশিস",
+        musicTheme: "হাজরা অনুষ্ঠান — ভক্তি ও আশিস সুর",
+        musicScale: [293.66, 329.63, 369.99, 440.00, 493.88],
+        musicTimbre: "flute",
+        tempo: 620,
+        backTitle: "হাজরার নির্মাল্য ও সোনার দীর্ঘায়ু প্রার্থনা",
+        backPoem: "২৬ নভেম্বরের পুণ্য প্রভাতে দেবতার নির্মাল্য শিষে,<br>সোনার দীর্ঘায়ু কামনায় সবাই এক হলো একসাথে এসে।<br>ছোট্ট জীবনের প্রতিটি পদক্ষেপ হোক কুসুমাস্তীর্ণ,<br>ঈশ্বরের দয়ায় আমাদের স্নেহ হোক অনন্ত ও অবতীর্ণ।",
+        backReflection: "সোনার জন্মের ৮ দিনের মাথায় হাজরা অনুষ্ঠানে পরিবারের বয়োজ্যেষ্ঠদের পবিত্র আশিস।"
+      },
+      {
+        chapterNum: "১৪",
+        folder: "ch12_annaprashan",
+        title: "অধ্যায় ১৪: সোনার অন্নপ্রাশন (মুখেভাত)",
+        date: "মে, ২০২৬ | জেজুর",
+        story: "সোনার মুখেভাতের পুণ্য উৎসব! টোপর মাথায় রাজপুত্রের বেশে সাজল আমাদের অদ্রিজিৎ। মামার কোলে বসে প্রথম অন্নগ্রহণ করল সোনা। দাদু, দিদা, ঠাকুমা, জেঠু, জেঠিমার আশীর্বাদে ভরে উঠল চারপাশ।",
+        photos: [
+          { file: "1.JPG", caption: "🍚 মামার কোলে ও হাতে ছোট্ট সোনার শুভ মুখেভাত" },
+          { file: "2.JPG", caption: "❤️ দাদু ও দিদার আদরে আমাদের রাজপুত্র সোনা" },
+          { file: "3.JPG", caption: "🙏 দাদু ও ঠাকুমার আশীর্বাদে ভরা স্নেহের মুহূর্ত" },
+          { file: "4.JPG", caption: "💐 জেঠু ও জেঠিমার আদর ও শুভাশিস" },
+          { file: "5.JPG", caption: "👨‍👩‍👦 বাবা ও মায়ের কোলে আমাদের আদরের রাজপুত্র" },
+          { file: "6.JPG", caption: "👑 রাজবেশে সাজানো আমাদের নয়নমণি অদ্রিজিৎ" },
+          { file: "IMG20260511153316.jpg", caption: "✨ অন্নপ্রাশনের উৎসবমুখর দিনে পারিবারিক আনন্দ" }
+        ],
+        quote: "মামার হাতে প্রথম অন্ন — সোনার মুখেভাতের মহোৎসব",
+        musicTheme: "অন্নপ্রাশন — মিষ্টি সানাই ও বাদ্যি",
+        musicScale: [293.66, 369.99, 440.00, 587.33, 659.25],
+        musicTimbre: "shehnai",
+        tempo: 520,
+        backTitle: "মামার কোলে সোনার প্রথম অন্নগ্রহণ",
+        backPoem: "টোপর মাথায় সোনার বরণ, লাল চেলিতে রাজকুমার,<br>মামার কোলে বসে খেল পায়েস, আনন্দ অপার।<br>কাঁসার বাটি, শাঁখের ধ্বনি, গুরুজনদের আশিস ধারা,<br>অদ্রিজিতের হাসিমুখ দেখে তৃপ্ত হলো বিশ্বপারা।",
+        backReflection: "সোনার মুখেভাতের পুণ্য দিনে আত্মীয়-স্বজন ও পাড়া-প্রতিবেশীদের অফুরন্ত ভালোবাসা ও আশীর্বাদ।"
+      },
+      {
+        chapterNum: "১৫",
+        folder: "ch12b_shashthi_2026",
+        title: "অধ্যায় ১৫: দ্বিতীয় জামাইষষ্ঠী — সোনাকে নিয়ে বেরুই ভ্রমণ!",
+        date: "জুন, ২০২৬ | বেরুই",
+        story: "দ্বিতীয় জামাইষষ্ঠীতে বেরুইয়ে এবার আর আমরা শুধু দুজন নই—কোলে আমাদের ছোট্ট রাজপুত্র সোনা! ছেলেকে সাথে নিয়ে বেরুইয়ের পথে ঘুরে বেড়ানোর অপার আনন্দ।",
+        photos: [
+          { file: "IMG20260905200326.jpg", caption: "🌿 দ্বিতীয় জামাইষষ্ঠীতে সোনাকে কোলে নিয়ে বেরুইয়ে ঘোরাঘুরি" }
+        ],
+        quote: "দ্বিতীয় জামাইষষ্ঠীতে সোনাকে সাথে নিয়ে আনন্দ ভ্রমণ",
+        musicTheme: "জামাইষষ্ঠী ২০২৬ — নাতি কোলে আনন্দ সুর",
+        musicScale: [261.63, 329.63, 392.00, 440.00, 523.25],
+        musicTimbre: "piano",
+        tempo: 600,
+        backTitle: "সোনার সাথে বেরুইয়ের পথে আনন্দের সফর",
+        backPoem: "গত বছর ছিলাম দুজন, এবার আমরা তিনজন,<br>সোনার হাসিতে রঙিন হলো বেরুইয়ের প্রকৃতি ও বন।<br>ছেলেকে কোলে নিয়ে ঘুরে বেড়ানোর মিষ্টি এই ক্ষণ,<br>ভালোবাসায় পূর্ণ হলো আমাদের ছোট্ট ভুবন।",
+        backReflection: "দ্বিতীয় জামাইষষ্ঠীতে কোলে ছোট্ট অদ্রিজিৎ—তিনজনের একসাথে ঘুরে বেড়ানোর মধুর স্মৃতি।"
+      },
+      {
+        chapterNum: "১৬",
+        folder: "ch13_bday_berui",
+        title: "অধ্যায় ১৬: মা হওয়ার পর প্রিয়ার প্রথম জন্মদিন — বেরুই",
+        date: "জুলাই, ২০২৬ | বেরুই",
+        story: "মা হওয়ার পর প্রিয়ার প্রথম জন্মদিন! বেরুইয়ের বাপের বাড়িতে ছোট্ট সোনাকে সাথে নিয়ে কেক কাটা। মাতৃত্বের এক মিষ্টি বছর আর আমাদের ভালোবাসার চিরনতুন রূপ।",
+        photos: [
+          { file: "IMG20260628212735.jpg", caption: "🎂 বেরুইয়ে কেক কেটে প্রিয়ার জন্মদিন উদযাপন" },
+          { file: "IMG20260628215824.jpg", caption: "💖 মা হওয়ার পর প্রথম জন্মদিন — সোনার সাথে আনন্দঘন মুহূর্ত" }
+        ],
+        quote: "মা হিসেবে প্রিয়ার প্রথম জন্মদিন পালন",
+        musicTheme: "শুভ জন্মদিন — মিষ্টি পিয়ানো মেলোডি",
+        musicScale: [261.63, 293.66, 329.63, 392.00, 523.25],
+        musicTimbre: "celesta",
+        tempo: 620,
+        backTitle: "জননী প্রিয়ার জন্মদিনে ভালোবাসার অর্ঘ্য",
+        backPoem: "স্ত্রী থেকে মা হয়ে ওঠার এক বছর পার হলো আজ,<br>সোনার মুখের হাসিতেই তোমার নিত্য সুখের সাজ।<br>বেরুইয়ের ঘরে সন্তানের হাত ধরে কাটলে জন্মদিনের কেক,<br>তোমার মতো জীবনসঙ্গিনী পাওয়াই আমার ভাগ্যের টেক।",
+        backReflection: "মা হওয়ার পর প্রিয়ার প্রথম জন্মদিন—সন্তানকে কোলে নিয়ে এক মমতাময়ী নারীর পূর্ণ রূপ।"
+      },
+      {
+        chapterNum: "১৭ক",
+        folder: "ch13b_pujo_2026",
+        title: "অধ্যায় ১৭ক: শারদীয়া দুর্গাপূজা ২০২৬ — পাণ্ডুয়া (সোনাকে সাথে নিয়ে!)",
+        date: "অক্টোবর, ২০২৬ | পাণ্ডুয়া",
+        story: "২০২৪-এ বিয়ের আগে যে পুজো শুরু হয়েছিল, ২০২৬-এ সেই পুজো এলো পূর্ণতা নিয়ে! পাণ্ডুয়ার মণ্ডপে মণ্ডপে এবার আমরা ঘুরে বেড়ালাম আমাদের ছোট্ট সোনাকে কোলে নিয়ে।",
+        photos: [
+          { file: "durga26_1.jpg", caption: "🌸 পাণ্ডুয়ার মণ্ডপে সোনাকে কোলে নিয়ে প্রথম পুজো পরিক্রমা" }
+        ],
+        quote: "ছোট্ট সোনাকে কোলে নিয়ে প্রথম দুর্গাপূজা পরিক্রমা",
+        musicTheme: "শারদীয়া উৎসব ২০২৬ — পুজো ঢাক ও সানাই",
+        musicScale: [293.66, 369.99, 440.00, 587.33, 659.25],
+        musicTimbre: "shehnai",
+        tempo: 520,
+        backTitle: "পাণ্ডুয়ার আলোয় সোনার প্রথম পুজো",
+        backPoem: "২০২৪-এ একা ছিলে, ২০২৬-এ সোনা কোলে,<br>পাণ্ডুয়ার মণ্ডপে মণ্ডপে ঢাকের আওয়াজ দোলে।<br>মা দুর্গার প্রতিমা দেখে সোনার অবাক দৃষ্টি,<br>মায়ের চরণে অর্পণ করলাম আমাদের পরিবার ও সৃষ্টি।",
+        backReflection: "সোনার জীবনের প্রথম শারদীয়া উৎসব—পাণ্ডুয়ার মণ্ডপে তিনজনের একসাথে পুজোর পরমানন্দ।"
+      },
+      {
+        chapterNum: "১৭খ",
+        folder: "ch13b_pujo_2026",
+        title: "অধ্যায় ১৭খ: দীপাবলি ও কালীপূজা ২০২৬ — মহানাদ",
+        date: "নভেম্বর, ২০২৬ | মহানাদ",
+        story: "মহানাদের ঐতিহ্যে আলোর উৎসব ও কালীপূজা। মা কালীর চরণে আমাদের তিনজনের প্রণাম আর আমাদের পরিবারের সার্বিক কল্যাণের আন্তরিক প্রার্থনা।",
+        photos: [
+          { file: "kali26_1.jpg", caption: "🪔 মহানাদের প্রাচীন কালীপূজায় সোনাকে নিয়ে দেবীর আশীর্বাদ" }
+        ],
+        quote: "মহানাদে কালীপূজার আলো আর পারিবারিক শান্তি",
+        musicTheme: "দীপাবলি ২০২৬ — প্রদীপের আলো ও শ্যামাসঙ্গীত",
+        musicScale: [261.63, 311.13, 392.00, 466.16, 523.25],
+        musicTimbre: "chimes",
+        tempo: 560,
+        backTitle: "মহানাদের পবিত্র আলো ও মায়ের কৃপা",
+        backPoem: "মহানাদের প্রাচীন মন্দিরে প্রদীপের সারি জ্বলে,<br>সোনার কপালে মায়ের সিঁদুর, শান্তি অপার জলে।<br>কালীপূজার আলোয় ঘুচে যাক জীবনের সকল আঁধার,<br>তিনজনের এই ছোট সংসার ভরে উঠুক বারবার।",
+        backReflection: "ঐতিহাসিক মহানাদে কালীপূজার পুণ্য লগ্নে সোনাকে নিয়ে দেবীর চরণে প্রণাম ও কল্যাণ প্রার্থনা।"
+      },
+      {
+        type: 'backcover',
+        heading: "শুভ ২য় বিবাহবার্ষিকী, প্রিয় অনিন্দিতা (প্রিয়া) ❤️",
+        milestoneBadge: "১লা অগ্রহায়ণ, ১৪৩৩ (১৭ নভেম্বর, ২০২৬) | ৭৩০ দিন একসাথে",
+        message: "৭৩০ দিন কীভাবে কেটে গেল টেরই পেলাম না! বেরুই থেকে জেজুরের এই পথচলায় তুমি যেভাবে আমাদের সংসার আর আমাদের 'সোনা' (অদ্রিজিৎ)-কে আগলে রেখেছ, তার জন্য ধন্যবাদ জানালে খুব কম হবে। আজকের এই ২য় বিবাহবার্ষিকীতে কোনো ছবির ফ্রেম নয়, বরং আমার পুরো হৃদয়টা তোমাকে দিলাম। তুমি শুধু আমার স্ত্রী নও, তুমি আমার সেরা বন্ধু এবং আমাদের পরিবারের প্রাণ। সামনের প্রতিটি অগ্রহায়ণ আর প্রতিটি বসন্ত এভাবেই তোমার হাত ধরে কাটাতে চাই। শুভ ২য় বিবাহবার্ষিকী, প্রিয়া! — ইতি, তোমার প্রসেনজিৎ ❤️✨",
+        musicTheme: "উপসংহার — অনন্ত ভালোবাসার সিম্ফনি",
+        musicScale: [261.63, 293.66, 329.63, 392.00, 523.25],
+        musicTimbre: "piano",
+        tempo: 680,
+        backTitle: "সমাপন ও অনন্ত আশীর্বাদ",
+        backPoem: "শ্রী শ্রী রামকৃষ্ণদেব ও মা সারদার চরণে উৎসর্গীকৃত,<br>আমাদের ভালোবাসার নীড় সদা হোক আনন্দমণ্ডিত।<br>হাতে হাত রেখে কাটুক আগামী সকল শতবর্ষ,<br>প্রসেনজিৎ, প্রিয়া ও সোনার জীবনে থাকুক স্বর্গীয় হর্ষ।",
+        backReflection: "Designed with infinite love for our 2nd Anniversary • ১লা অগ্রহায়ণ, ১৪৩৩"
+      }
+    ];
+
+    const photoIndices = {};
+    BOOK_DATA.forEach((item, pageIdx) => {
+      if (item.photos && item.photos.length > 0) {
+        photoIndices[pageIdx] = 0;
+      }
+    });
+
+    let currentPage = 0;
+    const totalPages = BOOK_DATA.length;
+    let isPage18Unlocked = false;
+    let enteredPin = "";
+    const SECRET_PIN = "1711";
+    let detectedPathPrefix = '';
+
+    function getPhotoPath(folder, filename) {
+      const cleanFile = filename.replace(/\.webp$/i, '.jpg');
+      return folder ? `${detectedPathPrefix}${folder}/${cleanFile}` : cleanFile;
+    }
+
+    const PH = (t) => 'data:image/svg+xml;utf8,' + encodeURIComponent(`<svg xmlns="http://www.w3.org/2000/svg" width="400" height="300"><rect width="100%" height="100%" fill="#2a0610"/><text x="200" y="140" fill="#f7e29c" font-size="18" text-anchor="middle" font-family="sans-serif">ছবিটি পাওয়া যায়নি</text><text x="200" y="170" fill="#d4af37" font-size="12" text-anchor="middle" font-family="sans-serif">${t.replace(/&/g,'&amp;').replace(/</g,'&lt;')}</text></svg>`);
+    
+    window.onImgErr = function(img) {
+      const tries = (img.dataset.tries || '').split('|').filter(Boolean);
+      let cur = img.getAttribute('src') || '';
+      if (cur.startsWith('data:')) return;
+      tries.push(cur); 
+      img.dataset.tries = tries.join('|');
+
+      const cands = [];
+
+      // If it started with photos/, try without photos/
+      if (cur.startsWith('photos/')) {
+        cands.push(cur.replace(/^photos\//, ''));
+      } else {
+        cands.push('photos/' + cur);
+      }
+
+      // If it has .webp, try .jpg, .JPG, .jpeg
+      if (cur.includes('.webp')) {
+        cands.push(cur.replace(/\.webp$/i, '.jpg'));
+        cands.push(cur.replace(/\.webp$/i, '.JPG'));
+        cands.push(cur.replace(/\.webp$/i, '.jpeg'));
+      }
+
+      // Extension variations
+      const m = cur.match(/^(.*)\.([A-Za-z0-9]+)$/);
+      if (m) {
+        ['jpg', 'JPG', 'jpeg', 'JPEG', 'png', 'webp'].forEach(e => {
+          cands.push(m[1] + '.' + e);
+          if (m[1].startsWith('photos/')) {
+            cands.push(m[1].replace(/^photos\//, '') + '.' + e);
+          } else {
+            cands.push('photos/' + m[1] + '.' + e);
+          }
+        });
+      }
+
+      const next = cands.find(c => c && !tries.includes(c));
+      if (next && tries.length < 14) {
+        img.src = next;
+      } else {
+        let n = cur.split('/').pop() || cur;
+        try { n = decodeURIComponent(n); } catch(e) {}
+        img.src = PH(n);
+      }
+    };
+
+    function toBengaliNumber(num) {
+      const bnDigits = ['০','১','২','৩','৪','৫','৬','৭','৮','৯'];
+      return num.toString().split('').map(d => bnDigits[d] !== undefined ? bnDigits[d] : d).join('');
+    }
+
+    /* ===== বাংলা তাল-ভিত্তিক সঙ্গীত ইঞ্জিন (প্রতিটি পাতার আলাদা তাল, রাগ ও বাদ্য) ===== */
+    const TALS = {
+      keherwa:{name:'কাহারবা',m:8,bols:['Dha','Ge','Na','Ti','Na','Ka','Dhi','Na'],khali:4},
+      dadra:{name:'দাদরা',m:6,bols:['Dha','Dhi','Na','Dha','Tu','Na'],khali:3},
+      roopak:{name:'রূপক',m:7,bols:['Tin','Tin','Na','Dhi','Na','Dhi','Na'],khali:0},
+      teental:{name:'তিনতাল',m:16,bols:['Dha','Dhin','Dhin','Dha','Dha','Dhin','Dhin','Dha','Dha','Tin','Tin','Ta','Ta','Dhin','Dhin','Dha'],khali:8},
+      jhaptal:{name:'ঝাঁপতাল',m:10,bols:['Dhi','Na','Dhi','Dhi','Na','Ti','Na','Dhi','Dhi','Na'],khali:5},
+      shashthi:{name:'ষষ্ঠী',m:6,bols:['Dha','Dhin','Dha','Dha','Dhin','Na'],khali:-1},
+      jhampak:{name:'ঝম্পক',m:5,bols:['Dhi','Na','Dhi','Dhi','Na'],khali:-1},
+      nabataal:{name:'নবতাল',m:9,bols:['Dha','Dhin','Dha','Dha','Dhin','Dha','Dha','Dhin','Na'],khali:-1},
+      ektal:{name:'একতাল',m:12,bols:['Dhin','Dhin','Dha','Ge','Ti','Ta','Tu','Na','Ka','Ta','Dha','Dhin'],khali:6},
+      dhak:{name:'ঢাকের বোল',m:8,bols:['Dhak','Dhak','Ta','Dhak','Dhak','Ta','Ka','Ta'],khali:-1}
+    };
+    const RAGAS = {
+      yaman:{n:'ইমন',s:[0,2,4,6,7,9,11]}, bhupali:{n:'ভূপালী',s:[0,2,4,7,9]},
+      bhairavi:{n:'ভৈরবী',s:[0,1,3,5,7,8,10]}, bhairav:{n:'ভৈরব',s:[0,1,4,5,7,8,11]},
+      khamaj:{n:'খাম্বাজ',s:[0,2,4,5,7,9,10]}, desh:{n:'দেশ',s:[0,2,5,7,9,11]},
+      bageshree:{n:'বাগেশ্রী',s:[0,2,3,5,7,9,10]}, pilu:{n:'পিলু',s:[0,2,3,5,7,8,10]}
+    };
+    /* index = BOOK_DATA-র পাতার ক্রম (০ = প্রচ্ছদ ... ২২ = গোপন চিঠি) */
+    const PAGE_MUSIC = [
+      {theme:'প্রচ্ছদ — বাঁশিতে ইমন', tal:'teental', raga:'yaman', sa:196, bpm:72, lead:'bansuri', perc:'tabla'},
+      {theme:'শুভ নিমন্ত্রণ — সেতারে ভূপালী', tal:'dadra', raga:'bhupali', sa:220, bpm:88, lead:'sitar', perc:'tabla'},
+      {theme:'শারদোৎসব — ঢাক ও সানাই', tal:'dhak', raga:'khamaj', sa:220, bpm:112, lead:'shehnai', perc:'dhak'},
+      {theme:'কালীপূজা — হারমোনিয়ামে শ্যামাসঙ্গীতের ভৈরবী', tal:'roopak', raga:'bhairavi', sa:196, bpm:90, lead:'harmonium', perc:'tabla', kansor:1},
+      {theme:'রেজিস্ট্রি — মিষ্টি বাঁশির সুর', tal:'keherwa', raga:'bhupali', sa:220, bpm:104, lead:'bansuri', perc:'tabla'},
+      {theme:'শুভ বিবাহ — সানাইয়ে বাগেশ্রী', tal:'jhaptal', raga:'bageshree', sa:196, bpm:84, lead:'shehnai', perc:'tabla'},
+      {theme:'বৌভাত — বধূবরণের সানাই', tal:'dadra', raga:'desh', sa:220, bpm:92, lead:'shehnai', perc:'tabla'},
+      {theme:'প্রথম নিমন্ত্রণ — হালকা সেতার', tal:'keherwa', raga:'pilu', sa:233.08, bpm:108, lead:'sitar', perc:'tabla'},
+      {theme:'হানিমুন — ঢেউয়ের ছন্দে নবতাল', tal:'nabataal', raga:'pilu', sa:220, bpm:96, lead:'sitar', perc:'tabla'},
+      {theme:'ভায়ার বিয়ে — আনন্দের সানাই', tal:'keherwa', raga:'khamaj', sa:220, bpm:116, lead:'shehnai', perc:'tabla', kansor:1},
+      {theme:'সুখবর — ঘুমপাড়ানি সেলেস্টা', tal:'shashthi', raga:'yaman', sa:220, bpm:76, lead:'celesta', perc:'soft'},
+      {theme:'বিষ্ণুপুর — ধ্রুপদী একতাল', tal:'ektal', raga:'bhairav', sa:196, bpm:66, lead:'sitar', perc:'tabla'},
+      {theme:'জামাইষষ্ঠী — হারমোনিয়ামের দাদরা', tal:'dadra', raga:'khamaj', sa:207.65, bpm:94, lead:'harmonium', perc:'tabla'},
+      {theme:'সাধভক্ষণ — স্নেহের ঝম্পক', tal:'jhampak', raga:'bhupali', sa:220, bpm:88, lead:'bansuri', perc:'soft'},
+      {theme:'সেই রাত — আবেগের রূপক', tal:'roopak', raga:'pilu', sa:196, bpm:84, lead:'harmonium', perc:'tabla'},
+      {theme:'সোনার জন্ম — ঘুমপাড়ানি ষষ্ঠী', tal:'shashthi', raga:'yaman', sa:246.94, bpm:66, lead:'celesta', perc:'soft'},
+      {theme:'হাজরা — কীর্তনের ঝম্পক ও খোল', tal:'jhampak', raga:'desh', sa:196, bpm:82, lead:'harmonium', perc:'khol'},
+      {theme:'অন্নপ্রাশন — উৎসবের কাহারবা', tal:'keherwa', raga:'bhairavi', sa:233.08, bpm:106, lead:'shehnai', perc:'tabla', kansor:1},
+      {theme:'দ্বিতীয় জামাইষষ্ঠী — সেতারে দাদরা', tal:'dadra', raga:'bhupali', sa:220, bpm:98, lead:'sitar', perc:'tabla'},
+      {theme:'জন্মদিন — খুশির কাহারবা', tal:'keherwa', raga:'yaman', sa:261.63, bpm:112, lead:'celesta', perc:'tabla'},
+      {theme:'পাণ্ডুয়ার পুজো — দ্রুত ঢাকের বোল', tal:'dhak', raga:'bhairav', sa:220, bpm:124, lead:'shehnai', perc:'dhak'},
+      {theme:'মহানাদের কালীপূজা — প্রদীপের রূপক', tal:'roopak', raga:'bhairavi', sa:196, bpm:86, lead:'harmonium', perc:'tabla', kansor:1},
+      {theme:'গোপন চিঠি — বাঁশিতে ইমন (তিনতাল)', tal:'teental', raga:'yaman', sa:196, bpm:68, lead:'bansuri', perc:'tabla'}
+    ];
+
+    function mulberry32(a){return function(){a|=0;a=a+0x6D2B79F5|0;let t=Math.imul(a^a>>>15,1|a);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296;};}
+
+    class DynamicStoryAudio {
+      constructor() {
+        this.ctx = null; this.isPlaying = false; this.timer = null; this.cfg = null; this.tal = null;
+        this.page = 0; this.slot = 0; this.cycle = 0; this.nextTime = 0; this.phrases = [];
+        this.master = null; this.dry = null; this.wet = null; this.noiseBuf = null; this.lastFreq = null;
+      }
+
+      init() {
+        if (!this.ctx) {
+          const AC = window.AudioContext || window.webkitAudioContext;
+          this.ctx = new AC();
+          const c = this.ctx;
+          this.master = c.createGain(); this.master.gain.value = 0.9;
+          const comp = c.createDynamicsCompressor();
+          this.master.connect(comp); comp.connect(c.destination);
+          this.dry = c.createGain(); this.dry.connect(this.master);
+          this.wet = c.createGain(); this.wet.gain.value = 0.32;
+          try {
+            const conv = c.createConvolver();
+            const len = Math.floor(c.sampleRate * 2.2), ir = c.createBuffer(2, len, c.sampleRate);
+            for (let ch = 0; ch < 2; ch++) { const d = ir.getChannelData(ch); for (let i = 0; i < len; i++) d[i] = (Math.random()*2-1) * Math.pow(1 - i/len, 2.6); }
+            conv.buffer = ir; this.wet.connect(conv); conv.connect(this.master);
+          } catch (e) { this.wet.connect(this.master); }
+          this.noiseBuf = c.createBuffer(1, c.sampleRate, c.sampleRate);
+          const nd = this.noiseBuf.getChannelData(0); for (let i = 0; i < nd.length; i++) nd[i] = Math.random()*2-1;
+        }
+        if (this.ctx.state === 'suspended') this.ctx.resume();
+      }
+
+      out(node, send = 0.25) { node.connect(this.dry); if (send > 0) { const s = this.ctx.createGain(); s.gain.value = send; node.connect(s); s.connect(this.wet); } }
+
+      tone(t, f0, f1, dur, g, type = 'sine', send = 0.15) {
+        const c = this.ctx, o = c.createOscillator(), e = c.createGain();
+        o.type = type; o.frequency.setValueAtTime(f0, t);
+        if (f1 && f1 !== f0) o.frequency.exponentialRampToValueAtTime(f1, t + Math.min(dur * 0.35, 0.12));
+        e.gain.setValueAtTime(0.0001, t); e.gain.linearRampToValueAtTime(g, t + 0.004); e.gain.exponentialRampToValueAtTime(0.0001, t + dur);
+        o.connect(e); this.out(e, send); o.start(t); o.stop(t + dur + 0.05);
+      }
+
+      noise(t, dur, fc, q, g, type = 'bandpass') {
+        const c = this.ctx, s = c.createBufferSource(), f = c.createBiquadFilter(), e = c.createGain();
+        s.buffer = this.noiseBuf; f.type = type; f.frequency.value = fc; f.Q.value = q;
+        e.gain.setValueAtTime(g, t); e.gain.exponentialRampToValueAtTime(0.0001, t + dur);
+        s.connect(f); f.connect(e); this.out(e, 0.08); s.start(t, Math.random() * 0.5); s.stop(t + dur + 0.02);
+      }
+
+      /* ----- তাল-বাদ্য: তবলা / খোল / ঢাক ----- */
+      dayan(t, v, ring, sa) { this.tone(t, sa*2, sa*1.99, 0.28*ring, 0.2*v, 'sine', 0.2); this.tone(t, sa*4.02, sa*4, 0.12*ring, 0.06*v); this.noise(t, 0.03, 3800, 1.2, 0.08*v); }
+      bayan(t, v) { this.tone(t, 105, 70, 0.42, 0.36*v, 'sine', 0.1); this.noise(t, 0.05, 220, 0.8, 0.12*v, 'lowpass'); }
+      bol(name, t, v, sa, kind) {
+        const khol = kind === 'khol'; const base = khol ? sa * 1.5 : sa;
+        switch (name) {
+          case 'Dha': this.dayan(t, v, 1, base); this.bayan(t, v); break;
+          case 'Dhin': this.dayan(t, v, 1.5, base); this.bayan(t, v*0.9); break;
+          case 'Dhi': this.dayan(t, v*0.85, 1, base); this.bayan(t, v*0.7); break;
+          case 'Na': case 'Ta': this.dayan(t, v*0.8, 0.7, base); break;
+          case 'Tin': this.dayan(t, v*0.9, 1.3, base*1.5); break;
+          case 'Ti': case 'Tu': this.dayan(t, v*0.45, 0.4, base); break;
+          case 'Ge': this.bayan(t, v); break;
+          case 'Ka': this.noise(t, 0.07, 1300, 1.5, 0.16*v); break;
+          default: break;
+        }
+      }
+      dhak(name, t, v) {
+        if (name === 'Dhak') { this.tone(t, 95, 58, 0.3, 0.42*v, 'sine', 0.2); this.noise(t, 0.09, 2600, 0.9, 0.3*v); this.noise(t + 0.05, 0.06, 4200, 1.2, 0.14*v); }
+        else if (name === 'Ta') { this.noise(t, 0.05, 3400, 1.4, 0.2*v); this.tone(t, 150, 110, 0.12, 0.12*v); }
+        else if (name === 'Ka') { this.noise(t, 0.03, 4800, 1.6, 0.14*v); }
+      }
+      kansor(t, v) { this.tone(t, 2960, 2940, 0.22, 0.05*v, 'sine', 0.35); this.tone(t, 4120, 4100, 0.14, 0.03*v, 'sine', 0.35); }
+
+      /* ----- সুরের কণ্ঠ ----- */
+      voice(t, f, dur, g, kind, glideFrom) {
+        const c = this.ctx, A = (type, fr) => { const o = c.createOscillator(); o.type = type; const gf = glideFrom && glideFrom !== f ? glideFrom * (fr / f) : fr; o.frequency.setValueAtTime(gf, t); if (gf !== fr) o.frequency.exponentialRampToValueAtTime(fr, t + 0.07); return o; };
+        const env = c.createGain(), flt = c.createBiquadFilter(); const nodes = [];
+        let attack = 0.03, release = dur;
+        if (kind === 'bansuri') {
+          const o1 = A('sine', f), o2 = A('sine', f * 2); const g2 = c.createGain(); g2.gain.value = 0.2; o2.connect(g2); g2.connect(flt); o1.connect(flt); nodes.push(o1, o2);
+          flt.type = 'lowpass'; flt.frequency.value = 3200; attack = 0.07; this.noise(t, dur * 0.8, 2600, 2, 0.02 * g / 0.1, 'bandpass'); g *= 1.1;
+        } else if (kind === 'shehnai') {
+          const o1 = A('sawtooth', f), o2 = A('square', f * 1.003); const g2 = c.createGain(); g2.gain.value = 0.35; o2.connect(g2); g2.connect(flt); o1.connect(flt); nodes.push(o1, o2);
+          flt.type = 'bandpass'; flt.frequency.value = 1500; flt.Q.value = 2.2; attack = 0.05; g *= 1.5;
+        } else if (kind === 'sitar') {
+          const o1 = A('sawtooth', f), o2 = A('triangle', f * 2.005); const g2 = c.createGain(); g2.gain.value = 0.3; o2.connect(g2); g2.connect(flt); o1.connect(flt); nodes.push(o1, o2);
+          flt.type = 'lowpass'; flt.frequency.setValueAtTime(5200, t); flt.frequency.exponentialRampToValueAtTime(900, t + 0.5); attack = 0.006; release = Math.min(dur * 1.6, 1.8); g *= 0.9;
+        } else if (kind === 'harmonium') {
+          const o1 = A('sawtooth', f * 0.998), o2 = A('sawtooth', f * 1.003); o1.connect(flt); o2.connect(flt); nodes.push(o1, o2);
+          flt.type = 'lowpass'; flt.frequency.value = 1700; attack = 0.05; g *= 0.55;
+        } else {
+          const o1 = A('sine', f), o2 = A('sine', f * 4); const g2 = c.createGain(); g2.gain.value = 0.18; o2.connect(g2); g2.connect(flt); o1.connect(flt); nodes.push(o1, o2);
+          flt.type = 'highpass'; flt.frequency.value = 300; attack = 0.004; release = Math.min(dur * 1.5, 2.2); g *= 1.2;
+        }
+        if (kind === 'bansuri' || kind === 'shehnai' || kind === 'harmonium') {
+          const lfo = c.createOscillator(), lg = c.createGain(); lfo.frequency.value = 5.3; lg.gain.setValueAtTime(0, t); lg.gain.linearRampToValueAtTime(f * 0.005, t + Math.min(0.25, dur * 0.6));
+          lfo.connect(lg); nodes.forEach(n => lg.connect(n.frequency)); lfo.start(t); lfo.stop(t + release + 0.1);
+        }
+        env.gain.setValueAtTime(0.0001, t); env.gain.linearRampToValueAtTime(g, t + attack);
+        if (kind === 'sitar' || kind === 'celesta') env.gain.exponentialRampToValueAtTime(0.0001, t + release);
+        else { env.gain.setValueAtTime(g, t + Math.max(attack, dur * 0.7)); env.gain.exponentialRampToValueAtTime(0.0001, t + dur + 0.12); }
+        flt.connect(env); this.out(env, 0.3);
+        nodes.forEach(n => { n.start(t); n.stop(t + release + 0.15); });
+      }
+
+      tanpura(t, i, sa) {
+        const seq = [sa * 1.5, sa * 2, sa * 2, sa];
+        this.tone(t, seq[i % 4], 0, 2.6, 0.03, 'triangle', 0.5);
+      }
+
+      /* ----- সুর সাজানো: প্রতিটি পাতার জন্য নির্দিষ্ট (seeded) মেলডি ----- */
+      buildPhrases(pageIdx) {
+        const cfg = PAGE_MUSIC[pageIdx], tal = TALS[cfg.tal], sc = RAGAS[cfg.raga].s, n = sc.length;
+        const rnd = mulberry32(1711 + pageIdx * 97), S = tal.m * 2;
+        const semi = i => sc[((i % n) + n) % n] + 12 * Math.floor(i / n);
+        const freq = i => cfg.sa * 2 * Math.pow(2, semi(i) / 12);
+        const pa = sc.indexOf(7) >= 0 ? sc.indexOf(7) : Math.floor(n / 2);
+        const make = (endIdx) => {
+          const out = []; let idx = n + (rnd() < 0.5 ? 0 : pa), slot = 0;
+          while (slot < S) {
+            const dur = Math.min([1, 2, 2, 2, 3, 4][Math.floor(rnd() * 6)], S - slot);
+            const last = slot + dur >= S;
+            if (slot === 0) idx = rnd() < 0.5 ? n : n + pa; else if (last) idx = endIdx; else { const st = [-2,-1,-1,0,1,1,2][Math.floor(rnd() * 7)]; idx = Math.max(n - 2, Math.min(2 * n + 1, idx + st)); }
+            out.push({ slot, dur, f: freq(idx), rest: !last && slot !== 0 && rnd() < 0.08 }); slot += dur;
+          }
+          return out;
+        };
+        const A = make(n + pa), B = make(n);
+        return [A, A, B, A];
+      }
+
+      switchThemeForPage(pageIdx) {
+        const cfg = PAGE_MUSIC[pageIdx]; if (!cfg) return;
+        this.page = pageIdx; this.cfg = cfg; this.tal = TALS[cfg.tal];
+        this.phrases = this.buildPhrases(pageIdx); this.slot = 0; this.cycle = 0; this.lastFreq = null;
+        const pill = document.getElementById('musicPillBadge');
+        if (pill) pill.textContent = `🎵 ${cfg.theme}`;
+        buildTalRing(this.tal, cfg);
+        if (this.ctx) {
+          this.nextTime = this.ctx.currentTime + 0.12;
+          const g = this.master.gain; g.cancelScheduledValues(this.ctx.currentTime); g.setValueAtTime(0.45, this.ctx.currentTime); g.linearRampToValueAtTime(0.9, this.ctx.currentTime + 0.9);
+        }
+      }
+
+      schedule() {
+        if (!this.isPlaying || !this.ctx || !this.cfg) return;
+        const c = this.ctx, cfg = this.cfg, tal = this.tal, beat = 60 / cfg.bpm, half = beat / 2;
+        while (this.nextTime < c.currentTime + 0.25) {
+          const t = this.nextTime, slot = this.slot, matra = Math.floor(slot / 2), onBeat = slot % 2 === 0;
+          if (onBeat) {
+            const bolName = tal.bols[matra], sam = matra === 0, accent = sam ? 1.15 : (matra === tal.khali ? 0.6 : 0.9);
+            if (cfg.perc === 'dhak') this.dhak(bolName, t, accent);
+            else if (cfg.perc === 'soft') this.bol(bolName, t, accent * 0.55, cfg.sa, 'tabla');
+            else this.bol(bolName, t, accent, cfg.sa, cfg.perc);
+            if (cfg.kansor && (sam || matra % 2 === 0)) this.kansor(t, sam ? 1.3 : 0.7);
+            if (matra % 2 === 0) this.tanpura(t, Math.floor(matra / 2) + this.cycle, cfg.sa);
+            const delay = Math.max(0, (t - c.currentTime) * 1000);
+            setTimeout(() => talBeatUI(matra, sam), delay);
+          } else if (cfg.perc !== 'dhak' && Math.random() < 0.22) { this.bol('Ti', t, 0.4, cfg.sa, cfg.perc); }
+          const ph = this.phrases[this.cycle % this.phrases.length];
+          const note = ph.find(nn => nn.slot === slot);
+          if (note && !note.rest) { this.voice(t, note.f, note.dur * half * 0.95, 0.075, cfg.lead, this.lastFreq && cfg.lead !== 'celesta' && Math.abs(Math.log2(note.f / this.lastFreq)) < 0.3 ? this.lastFreq : null); this.lastFreq = note.f; }
+          this.nextTime += half; this.slot++;
+          if (this.slot >= tal.m * 2) { this.slot = 0; this.cycle++; }
+        }
+      }
+
+      playPageTurnSound() {
+        this.init(); if (!this.ctx) return;
+        const t = this.ctx.currentTime; this.noise(t, 0.16, 1800, 0.8, 0.06);
+      }
+      playUnlockSound() {
+        this.init(); if (!this.ctx) return;
+        const t = this.ctx.currentTime; [523.25, 659.25, 783.99, 1046.5, 1318.51].forEach((f, i) => this.voice(t + i * 0.11, f, 1.6, 0.1, 'celesta'));
+      }
+
+      start() {
+        this.init(); if (this.isPlaying) return;
+        this.isPlaying = true;
+        this.switchThemeForPage(typeof currentPage === 'number' ? currentPage : 0);
+        this.timer = setInterval(() => this.schedule(), 40);
+        document.getElementById('musicBtn').classList.add('playing');
+        document.getElementById('musicBtnText').textContent = "সঙ্গীত: চালু 🎵";
+      }
+      stop() {
+        this.isPlaying = false; if (this.timer) clearInterval(this.timer);
+        document.getElementById('musicBtn').classList.remove('playing');
+        document.getElementById('musicBtnText').textContent = "সঙ্গীত: বন্ধ 🔇";
+      }
+      toggle() { if (this.isPlaying) this.stop(); else this.start(); }
+    }
+
+    const audioPlayer = new DynamicStoryAudio();
+    document.addEventListener('visibilitychange', () => {
+      if (!audioPlayer.ctx) return;
+      if (document.hidden) audioPlayer.ctx.suspend(); else if (audioPlayer.isPlaying) audioPlayer.ctx.resume();
+    });
+
+    /* তাল-চক্র: প্রতিটি মাত্রায় একটি বিন্দু জ্বলে, সমে সোনালি */
+    function buildTalRing(tal, cfg) {
+      const svg = document.getElementById('talRing'), nm = document.getElementById('talName');
+      if (!svg || !nm) return;
+      const m = tal.m, R = 9, cx = 12, cy = 12; let h = '';
+      for (let i = 0; i < m; i++) {
+        const a = -Math.PI / 2 + (i / m) * Math.PI * 2, x = cx + R * Math.cos(a), y = cy + R * Math.sin(a);
+        const cls = i === 0 ? 'sam' : (i === tal.khali ? 'khali' : '');
+        h += `<circle class="td ${cls}" id="td-${i}" cx="${x.toFixed(2)}" cy="${y.toFixed(2)}" r="${i === 0 ? 2.1 : 1.4}"/>`;
+      }
+      svg.innerHTML = h;
+      nm.textContent = `${tal.name} · ${toBengaliNumber(m)} মাত্রা · ${RAGAS[cfg.raga].n}`;
+    }
+    let lastTd = -1;
+    function talBeatUI(matra, sam) {
+      const prev = document.getElementById('td-' + lastTd); if (prev) prev.classList.remove('on');
+      const cur = document.getElementById('td-' + matra); if (cur) cur.classList.add('on');
+      lastTd = matra;
+      if (sam) { const p = document.getElementById('polaroid-' + currentPage); if (p) { p.classList.add('sam-pulse'); setTimeout(() => p.classList.remove('sam-pulse'), 450); } }
+    }
+
+
+    /* AMBIENT PARTICLES */
+    const canvas = document.getElementById('ambientCanvas');
+    const ctx = canvas.getContext('2d');
+    let particles = [];
+    let isCelebrationShower = false;
+
+    function resizeCanvas() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    }
+    window.addEventListener('resize', resizeCanvas);
+    resizeCanvas();
+
+    class PetalParticle {
+      constructor() { this.reset(); }
+      reset() {
+        this.x = Math.random() * canvas.width;
+        this.y = -20 - Math.random() * 50;
+        this.size = 8 + Math.random() * 14;
+        this.speedY = isCelebrationShower ? (1.5 + Math.random() * 2.5) : (0.8 + Math.random() * 1.4);
+        this.speedX = Math.sin(Math.random() * 6) * 1.2;
+        this.rotation = Math.random() * 360;
+        this.rotSpeed = (Math.random() - 0.5) * 2;
+        this.opacity = 0.35 + Math.random() * 0.5;
+        const rand = Math.random();
+        if (isCelebrationShower) {
+          this.kind = rand < 0.45 ? 'heart' : (rand < 0.75 ? 'gold' : 'petal');
+        } else {
+          this.kind = rand < 0.3 ? 'gold' : 'petal';
+        }
+      }
+      update() {
+        this.y += this.speedY;
+        this.x += this.speedX + Math.sin(this.y * 0.015) * 0.8;
+        this.rotation += this.rotSpeed;
+        if (this.y > canvas.height + 30) this.reset();
+      }
+      draw() {
+        ctx.save();
+        ctx.translate(this.x, this.y);
+        ctx.rotate((this.rotation * Math.PI) / 180);
+        ctx.globalAlpha = this.opacity;
+        if (this.kind === 'heart') {
+          ctx.fillStyle = '#ff1a40';
+          ctx.beginPath();
+          const s = this.size * 0.45;
+          ctx.moveTo(0, s * 0.3);
+          ctx.bezierCurveTo(-s, -s * 0.6, -s * 1.4, s * 0.5, 0, s * 1.4);
+          ctx.bezierCurveTo(s * 1.4, s * 0.5, s, -s * 0.6, 0, s * 0.3);
+          ctx.fill();
+        } else if (this.kind === 'gold') {
+          ctx.fillStyle = '#f7e29c';
+          ctx.beginPath();
+          ctx.arc(0, 0, this.size * 0.35, 0, Math.PI * 2);
+          ctx.fill();
+        } else {
+          ctx.fillStyle = '#b3243c';
+          ctx.beginPath();
+          ctx.moveTo(0, -this.size * 0.5);
+          ctx.bezierCurveTo(this.size * 0.6, -this.size * 0.6, this.size * 0.8, this.size * 0.4, 0, this.size);
+          ctx.bezierCurveTo(-this.size * 0.8, this.size * 0.4, -this.size * 0.6, -this.size * 0.6, 0, -this.size * 0.5);
+          ctx.fill();
+        }
+        ctx.restore();
+      }
+    }
+
+    function initParticles(count = 28) {
+      particles = [];
+      for (let i = 0; i < count; i++) {
+        const p = new PetalParticle();
+        p.y = Math.random() * canvas.height;
+        particles.push(p);
+      }
+    }
+    initParticles(28);
+
+    function triggerCelebrationShower() {
+      isCelebrationShower = true;
+      initParticles(85);
+    }
+
+    function animateParticles() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      particles.forEach(p => { p.update(); p.draw(); });
+      requestAnimationFrame(animateParticles);
+    }
+    animateParticles();
+
+    /* DOM BUILDER */
+    const bookContainer = document.getElementById('bookContainer');
+
+    function renderBook() {
+      bookContainer.innerHTML = '';
+
+      BOOK_DATA.forEach((item, pageIndex) => {
+        const pageEl = document.createElement('div');
+        pageEl.className = 'book-page';
+        pageEl.id = `page-${pageIndex}`;
+        pageEl.dataset.page = pageIndex;
+        pageEl.style.zIndex = totalPages - pageIndex;
+
+        const frontFace = document.createElement('div');
+        frontFace.className = 'page-face page-front';
+
+        const backFace = document.createElement('div');
+        backFace.className = 'page-face page-back';
+
+        if (item.type === 'cover') {
+          frontFace.className += ' cover-style';
+          frontFace.innerHTML = `
+            <div class="cover-border-ornament"></div>
+            <div style="font-size:12px; color:var(--gold-light); letter-spacing:1px;">✨ ১লা অগ্রহায়ণ, ১৪৩৩ • ২য় বিবাহবার্ষিকী ✨</div>
+            <div style="text-align:center; margin:auto 0; width:100%;">
+              <div class="cover-mandala">🌸</div>
+              <h1 class="cover-title">${item.title}</h1>
+              <div class="cover-subtitle">${item.subtitle}</div>
+              <div class="cover-names">${item.names}</div>
+              <br>
+              <button class="cover-cta-btn" onclick="goToPage(1)">${item.btnText}</button>
+            </div>
+            <div style="font-size:10.5px; color:#ffd6df;">বেরুই • পাণ্ডুয়া • জেজুর • হরিপাল</div>
+            <div class="corner-turn-guide" onclick="goToPage(1)" title="পাতা উল্টান"></div>
+          `;
+
+          backFace.className += ' inside-cover-style';
+          backFace.innerHTML = `
+            <div class="cover-border-ornament"></div>
+            <div style="font-size:12px; color:var(--gold-light); letter-spacing:2px;">❦ স্মৃতির সোনালি প্রচ্ছদ ❦</div>
+            <div style="max-width:90%;">
+              <div style="font-size:32px; margin-bottom:6px;">🌹</div>
+              <h3 style="font-family:'Galada', cursive; font-size:22px; color:var(--gold-light); margin-bottom:8px;">${item.backTitle}</h3>
+              <p style="font-size:13.5px; line-height:1.75; color:#ffe8ee; font-style:italic;">"${item.backPoem}"</p>
+              <div style="margin-top:12px; font-size:11.5px; color:#f7e29c; line-height:1.5;">${item.backReflection}</div>
+              <div style="margin-top:14px; font-size:11.5px; color:var(--gold-primary);">💍 ১লা অগ্রহায়ণ, ১৪৩১ • 👶 অদ্রিজিৎ (সোনা) • 🏡 সুখের নীড়</div>
+            </div>
+            <div style="font-size:10.5px; color:#f7e29c;">~ প্রসেনজিৎ ও প্রিয়ার সুখী দাম্পত্য ~</div>
+          `;
+
+        } else if (item.type === 'backcover') {
+          frontFace.className += ' back-cover-style';
+          frontFace.innerHTML = `
+            <div class="cover-border-ornament"></div>
+            <div class="pin-lock-container ${isPage18Unlocked ? 'unlocked' : ''}" id="pinLockScreen">
+              <div class="pin-card-inner">
+                <div class="pin-lock-icon">🔒</div>
+                <div class="pin-title">শুধুমাত্র প্রিয়ার জন্য সংরক্ষিত</div>
+                <div class="pin-sub">গোপন পিন দিন ও ভালোবাসার চিঠিটি উন্মোচন করুন ❤️</div>
+                <div class="pin-dots-display" id="pinDots">
+                  <div class="pin-dot-box" id="pdot-0">•</div>
+                  <div class="pin-dot-box" id="pdot-1">•</div>
+                  <div class="pin-dot-box" id="pdot-2">•</div>
+                  <div class="pin-dot-box" id="pdot-3">•</div>
+                </div>
+                <div class="keypad-grid">
+                  <button class="key-btn" onclick="enterPinDigit('1')">1</button>
+                  <button class="key-btn" onclick="enterPinDigit('2')">2</button>
+                  <button class="key-btn" onclick="enterPinDigit('3')">3</button>
+                  <button class="key-btn" onclick="enterPinDigit('4')">4</button>
+                  <button class="key-btn" onclick="enterPinDigit('5')">5</button>
+                  <button class="key-btn" onclick="enterPinDigit('6')">6</button>
+                  <button class="key-btn" onclick="enterPinDigit('7')">7</button>
+                  <button class="key-btn" onclick="enterPinDigit('8')">8</button>
+                  <button class="key-btn" onclick="enterPinDigit('9')">9</button>
+                  <button class="key-btn" onclick="clearPin()" style="font-size:12px; color:var(--gold-light);">C</button>
+                  <button class="key-btn" onclick="enterPinDigit('0')">0</button>
+                  <button class="key-btn" onclick="backspacePin()" style="font-size:12px; color:var(--gold-light);">⌫</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="letter-card">
+              <div class="wax-seal">💌</div>
+              <div class="letter-title">${item.heading}</div>
+              <div class="letter-badge">${item.milestoneBadge}</div>
+              <div class="letter-body">"${item.message}"</div>
+            </div>
+
+            <div style="text-align:center; font-size:10.5px; color:#f7e29c;">
+              চিরন্তন ভালোবাসায় বাঁধা আমাদের সংসার • ১লা অগ্রহায়ণ, ১৪৩৩ — অনন্তকাল ✨
+            </div>
+          `;
+
+          backFace.className += ' cover-style';
+          backFace.innerHTML = `
+            <div class="cover-border-ornament"></div>
+            <div style="font-size:12px; color:var(--gold-light); letter-spacing:1px;">✨ সমাপন ✨</div>
+            <div style="text-align:center; margin:auto 0; width:100%;">
+              <div class="cover-mandala">⚜️</div>
+              <h2 style="font-family:'Galada', cursive; font-size:22px; color:var(--gold-light); margin-bottom:6px;">
+                শ্রী শ্রী রামকৃষ্ণদেব ও মা সারদার চরণে উৎসর্গীকৃত
+              </h2>
+              <p style="font-size:13px; color:#ffe8ee; margin-top:8px;">
+                প্রসেনজিৎ ❤️ প্রিয়া (অনিন্দিতা)<br>আদরের রাজপুত্র: অদ্রিজিৎ (সোনা)
+              </p>
+              <br>
+              <button class="cover-cta-btn" onclick="goToPage(0)">🔄 প্রচ্ছদে ফিরে যান</button>
+            </div>
+            <div style="font-size:10px; color:#ffd6df;">Designed with infinite love for our 2nd Anniversary</div>
+          `;
+
+        } else {
+          frontFace.className += ' story-page-style';
+          const hasMultiplePhotos = item.photos && item.photos.length > 1;
+          const currentPhoto = item.photos[0];
+          const initialPhotoSrc = getPhotoPath(item.folder, currentPhoto.file);
+          const countBadgeText = hasMultiplePhotos
+            ? `📸 ছবি ১ / ${toBengaliNumber(item.photos.length)}`
+            : `📸 ১টি ছবি`;
+
+          frontFace.innerHTML = `
+            <div class="page-header-row">
+              <span class="ch-badge">অধ্যায় ${item.chapterNum}</span>
+              <button class="poem-btn" onclick="event.stopPropagation(); openPoem(${pageIndex})">📜 কবিতা</button>
+              <span class="ch-date-badge">📅 ${item.date}</span>
+            </div>
+
+            <h2 class="ch-title">${item.title}</h2>
+
+            <div class="photo-stage-wrapper">
+              <div class="polaroid-frame" id="polaroid-${pageIndex}" onclick="openLightbox(${pageIndex})">
+                <div class="photo-viewport">
+                  <div class="photo-count-badge" id="counter-pill-${pageIndex}">${countBadgeText}</div>
+                  <img src="${initialPhotoSrc}" alt="${item.title}" id="img-slot-${pageIndex}" onerror="onImgErr(this)">
+                  <div class="zoom-hint-btn">🔍 বড় করে দেখুন</div>
+                </div>
+
+                <div class="polaroid-caption">
+                  <span class="polaroid-caption-text" id="caption-text-${pageIndex}">${currentPhoto.caption}</span>
+                </div>
+              </div>
+
+              ${hasMultiplePhotos ? `
+                <button class="carousel-nav-btn nav-prev" onclick="event.stopPropagation(); changePhoto(${pageIndex}, -1)">❮</button>
+                <button class="carousel-nav-btn nav-next" onclick="event.stopPropagation(); changePhoto(${pageIndex}, 1)">❯</button>
+
+                <div class="thumb-dots-container" id="dots-${pageIndex}">
+                  ${item.photos.map((_, pIdx) => `
+                    <div class="thumb-dot ${pIdx === 0 ? 'active' : ''}" onclick="event.stopPropagation(); setPhotoIndex(${pageIndex}, ${pIdx})"></div>
+                  `).join('')}
+                </div>
+              ` : ''}
+            </div>
+
+            <div class="story-text-container">
+              <p class="story-text">${item.story}</p>
+            </div>
+
+            <div class="page-footer-row">
+              <span class="page-footer-quote">~ ${item.quote || "ভালোবাসার মুহূর্ত"} ~</span>
+              <span class="page-number-text">পৃষ্ঠা ${toBengaliNumber(pageIndex)} / ২২</span>
+            </div>
+
+            <div class="corner-turn-guide" onclick="goToPage(${pageIndex + 1})" title="পরের পাতা"></div>
+          `;
+
+          backFace.className += ' keepsake-back-style';
+          let photoSectionHtml = '';
+          if (item.photos.length >= 2) {
+            const previewPhotos = item.photos.slice(0, 4);
+            photoSectionHtml = `
+              <div class="backface-mosaic-grid">
+                ${previewPhotos.map((p, mIdx) => `
+                  <div class="mosaic-card" onclick="openLightboxToImage(${pageIndex}, ${mIdx})" title="${p.caption}">
+                    <img src="${getPhotoPath(item.folder, p.file)}" alt="" onerror="onImgErr(this)" loading="lazy">
+                  </div>
+                `).join('')}
+              </div>
+            `;
+          } else {
+            const heroPhoto = item.photos[0];
+            photoSectionHtml = `
+              <div class="keepsake-single-hero" onclick="openLightboxToImage(${pageIndex}, 0)">
+                <img src="${getPhotoPath(item.folder, heroPhoto.file)}" alt="" onerror="onImgErr(this)" loading="lazy">
+                <div style="margin-top:4px; font-size:10.5px; color:#f7e29c; text-align:center;">
+                  🔍 ${heroPhoto.caption}
+                </div>
+              </div>
+            `;
+          }
+
+          backFace.innerHTML = `
+            <div class="keepsake-header-row">
+              <span class="keepsake-ch-badge">❦ ${item.backTitle || 'স্মৃতির সোনালি পাতা'} ❦</span>
+              <span class="keepsake-date-badge">📅 ${item.date}</span>
+            </div>
+
+            <div class="keepsake-poem-box">
+              <div class="keepsake-poem-title">📜 ${item.backTitle}</div>
+              <div class="keepsake-poem-lines">"${item.backPoem}"</div>
+              <div class="keepsake-micro-reflection">${item.backReflection}</div>
+            </div>
+
+            ${photoSectionHtml}
+
+            <div class="keepsake-footer-row">
+              <span>💍 প্রসেনজিৎ ও প্রিয়া</span>
+              <span style="font-weight:600; color:var(--crimson-royal);">অধ্যায় ${item.chapterNum} (${toBengaliNumber(item.photos.length)}টি ছবি)</span>
+            </div>
+
+            <div class="corner-turn-guide" onclick="goToPage(${pageIndex - 1})" title="পূর্ববর্তী পাতা" style="left:0; right:auto; transform:scaleX(-1);"></div>
+          `;
+        }
+
+        pageEl.appendChild(frontFace);
+        pageEl.appendChild(backFace);
+        bookContainer.appendChild(pageEl);
+      });
+    }
+
+    /* MULTI-PHOTO CAROUSEL FUNCTIONS */
+    window.changePhoto = function(pageIdx, delta) {
+      const item = BOOK_DATA[pageIdx];
+      if (!item || !item.photos || item.photos.length <= 1) return;
+      const total = item.photos.length;
+      const newIdx = (photoIndices[pageIdx] + delta + total) % total;
+      setPhotoIndex(pageIdx, newIdx);
+    };
+
+    window.setPhotoIndex = function(pageIdx, newIdx) {
+      const item = BOOK_DATA[pageIdx];
+      if (!item || !item.photos) return;
+      photoIndices[pageIdx] = newIdx;
+      const photoObj = item.photos[newIdx];
+
+      const imgEl = document.getElementById(`img-slot-${pageIdx}`);
+      if (imgEl) {
+        imgEl.style.opacity = '0.35';
+        const url = getPhotoPath(item.folder, photoObj.file), token = String(Date.now() + Math.random());
+        imgEl.dataset.token = token; imgEl.dataset.tries = '';
+        const pre = new Image();
+        const apply = () => { if (imgEl.dataset.token !== token) return; imgEl.src = url; imgEl.style.opacity = '1'; };
+        pre.onload = apply; pre.onerror = apply; pre.src = url;
+      }
+
+      const capEl = document.getElementById(`caption-text-${pageIdx}`);
+      if (capEl) capEl.textContent = photoObj.caption;
+
+      const pillEl = document.getElementById(`counter-pill-${pageIdx}`);
+      if (pillEl) {
+        pillEl.textContent = `📸 ছবি ${toBengaliNumber(newIdx + 1)} / ${toBengaliNumber(item.photos.length)}`;
+      }
+
+      const dotsContainer = document.getElementById(`dots-${pageIdx}`);
+      if (dotsContainer) {
+        dotsContainer.querySelectorAll('.thumb-dot').forEach((dot, idx) => {
+          dot.classList.toggle('active', idx === newIdx);
+        });
+      }
+    };
+
+    /* 3D FLIPBOOK CONTROLLER */
+    function updateBookFlip() {
+      for (let i = 0; i < totalPages; i++) {
+        const pageEl = document.getElementById(`page-${i}`);
+        if (!pageEl) continue;
+
+        if (i < currentPage) {
+          pageEl.classList.add('flipped');
+          const leftRank = i + 1;
+          pageEl.style.zIndex = leftRank;
+          pageEl.style.transform = `translate3d(0, 0, ${leftRank * 2}px) rotateY(-180deg)`;
+        } else {
+          pageEl.classList.remove('flipped');
+          const rightRank = totalPages - i;
+          pageEl.style.zIndex = rightRank;
+          pageEl.style.transform = `rotateY(0deg) translate3d(0, 0, ${rightRank * 2}px)`;
+        }
+      }
+
+      if (currentPage === 0) {
+        bookContainer.classList.add('cover-view');
+        bookContainer.classList.remove('spread-view');
+      } else {
+        bookContainer.classList.remove('cover-view');
+        bookContainer.classList.add('spread-view');
+      }
+
+      const slider = document.getElementById('pageSlider');
+      if (slider) slider.value = currentPage;
+
+      const ind = document.getElementById('pageIndicatorText');
+      if (ind) {
+        if (currentPage === 0) {
+          ind.textContent = `প্রচ্ছদ (পাতা ০ / ২২)`;
+        } else if (currentPage === 22) {
+          ind.textContent = `বিশেষ চিঠি ও শেষ পাতা (পাতা ২২ / ২২)`;
+        } else {
+          const ch = BOOK_DATA[currentPage];
+          ind.textContent = `অধ্যায় ${ch.chapterNum} (${toBengaliNumber(ch.photos.length)}টি ছবি) • পাতা ${toBengaliNumber(currentPage)} / ২২`;
+        }
+      }
+
+      document.getElementById('prevPageBtn').style.opacity = currentPage === 0 ? '0.4' : '1';
+      document.getElementById('nextPageBtn').style.opacity = currentPage === totalPages - 1 ? '0.4' : '1';
+      audioPlayer.switchThemeForPage(currentPage);
+      preloadPage(currentPage); preloadPage(currentPage + 1);
+    }
+
+    function goToPage(targetPage) {
+      if (targetPage < 0) targetPage = 0;
+      if (targetPage >= totalPages) targetPage = totalPages - 1;
+      if (targetPage === currentPage) return;
+      if (!audioPlayer.isPlaying) audioPlayer.start();
+      audioPlayer.playPageTurnSound();
+      currentPage = targetPage;
+      updateBookFlip();
+    }
+
+    window.goToPage = goToPage;
+
+    document.getElementById('prevPageBtn').addEventListener('click', () => goToPage(currentPage - 1));
+    document.getElementById('nextPageBtn').addEventListener('click', () => goToPage(currentPage + 1));
+    document.getElementById('pageSlider').addEventListener('input', (e) => goToPage(parseInt(e.target.value)));
+
+    window.addEventListener('keydown', (e) => {
+      if (currentPage === 22 && !isPage18Unlocked) {
+        if (e.key >= '0' && e.key <= '9') { enterPinDigit(e.key); return; }
+        else if (e.key === 'Backspace') { backspacePin(); return; }
+        else if (e.key === 'Escape') { clearPin(); return; }
+      }
+      if (document.getElementById('lightboxModal').classList.contains('active')) {
+        if (e.key === 'ArrowLeft') lbNav(-1);
+        if (e.key === 'ArrowRight') lbNav(1);
+        if (e.key === 'Escape') closeLightbox();
+        return;
+      }
+      if (e.key === 'ArrowLeft') goToPage(currentPage - 1);
+      if (e.key === 'ArrowRight' || e.key === ' ') goToPage(currentPage + 1);
+    });
+
+    let touchStartX = 0;
+    let touchStartY = 0;
+    bookContainer.addEventListener('touchstart', (e) => {
+      touchStartX = e.changedTouches[0].screenX;
+      touchStartY = e.changedTouches[0].screenY;
+    }, { passive: true });
+
+    bookContainer.addEventListener('touchend', (e) => {
+      const diffX = e.changedTouches[0].screenX - touchStartX;
+      const diffY = e.changedTouches[0].screenY - touchStartY;
+      if (Math.abs(diffX) > 40 && Math.abs(diffX) > Math.abs(diffY)) {
+        const onPhoto = e.target.closest && e.target.closest('.polaroid-frame');
+        const it = BOOK_DATA[currentPage];
+        if (onPhoto && it && it.photos && it.photos.length > 1) { changePhoto(currentPage, diffX < 0 ? 1 : -1); return; }
+        if (diffX < 0) goToPage(currentPage + 1);
+        else goToPage(currentPage - 1);
+      }
+    }, { passive: true });
+
+    /* SECRET PIN LOCK (1711) */
+    window.enterPinDigit = function(digit) {
+      if (isPage18Unlocked || enteredPin.length >= 4) return;
+      enteredPin += digit;
+      updatePinDisplay();
+      if (enteredPin.length === 4) setTimeout(verifyPin, 200);
+    };
+
+    window.backspacePin = function() {
+      if (enteredPin.length > 0) {
+        enteredPin = enteredPin.slice(0, -1);
+        updatePinDisplay();
+      }
+    };
+
+    window.clearPin = function() {
+      enteredPin = "";
+      updatePinDisplay();
+    };
+
+    function updatePinDisplay() {
+      for (let i = 0; i < 4; i++) {
+        const dot = document.getElementById(`pdot-${i}`);
+        if (dot) {
+          if (i < enteredPin.length) {
+            dot.textContent = "❤️";
+            dot.classList.add('filled');
+          } else {
+            dot.textContent = "•";
+            dot.classList.remove('filled');
+          }
+          dot.classList.remove('error');
+        }
+      }
+    }
+
+    function verifyPin() {
+      if (enteredPin === SECRET_PIN) {
+        isPage18Unlocked = true;
+        audioPlayer.playUnlockSound();
+        triggerCelebrationShower();
+        const lockScreen = document.getElementById('pinLockScreen');
+        if (lockScreen) lockScreen.classList.add('unlocked');
+      } else {
+        for (let i = 0; i < 4; i++) {
+          const dot = document.getElementById(`pdot-${i}`);
+          if (dot) dot.classList.add('error');
+        }
+        setTimeout(() => { enteredPin = ""; updatePinDisplay(); }, 600);
+      }
+    }
+
+    /* CURTAIN */
+    const curtainOverlay = document.getElementById('curtainOverlay');
+    document.getElementById('openCurtainBtn').addEventListener('click', () => {
+      audioPlayer.start();
+      audioPlayer.playPageTurnSound();
+      curtainOverlay.classList.add('curtain-opened');
+      setTimeout(() => { curtainOverlay.style.display = 'none'; }, 1700);
+    });
+
+    window.openPoem = function(i) {
+      const it = BOOK_DATA[i]; if (!it) return;
+      document.getElementById('poemTitle').textContent = '📜 ' + (it.backTitle || '');
+      document.getElementById('poemLines').innerHTML = '"' + (it.backPoem || '') + '"';
+      document.getElementById('poemRef').textContent = it.backReflection || '';
+      document.getElementById('poemModal').classList.add('active');
+    };
+    document.getElementById('poemModal').addEventListener('click', (e) => { if (e.target.id === 'poemModal') e.target.classList.remove('active'); });
+    function preloadPage(i) { const it = BOOK_DATA[i]; if (it && it.photos) it.photos.forEach(p => { const im = new Image(); im.src = getPhotoPath(it.folder, p.file); }); }
+
+    /* TOC */
+    const tocModal = document.getElementById('tocModal');
+    const tocListContainer = document.getElementById('tocListContainer');
+
+    function buildTOC() {
+      tocListContainer.innerHTML = '';
+      BOOK_DATA.forEach((item, idx) => {
+        const itemEl = document.createElement('div');
+        itemEl.className = `toc-item ${idx === currentPage ? 'current' : ''}`;
+        let label = '';
+        let meta = '';
+        if (item.type === 'cover') {
+          label = 'প্রচ্ছদ — ১লা অগ্রহায়ণ, ১৪৩৩ স্মারক';
+          meta = 'শুরু';
+        } else if (item.type === 'backcover') {
+          label = 'উপসংহার — ভালোবাসার বিশেষ চিঠি (গোপন পিন লক 🔒)';
+          meta = 'শেষ পাতা';
+        } else {
+          label = item.title;
+          meta = `${item.date} • ${toBengaliNumber(item.photos.length)}টি ছবি`;
+        }
+        itemEl.innerHTML = `
+          <div class="toc-item-left">
+            <div class="toc-item-num">${item.chapterNum || toBengaliNumber(idx)}</div>
+            <div>
+              <div class="toc-item-title">${label}</div>
+              <div class="toc-item-meta">${meta}</div>
+            </div>
+          </div>
+          <span style="color:var(--gold-light);">➔</span>
+        `;
+        itemEl.addEventListener('click', () => {
+          goToPage(idx);
+          tocModal.classList.remove('active');
+        });
+        tocListContainer.appendChild(itemEl);
+      });
+    }
+
+    document.getElementById('tocBtn').addEventListener('click', () => { buildTOC(); tocModal.classList.add('active'); });
+    document.getElementById('tocCloseBtn').addEventListener('click', () => tocModal.classList.remove('active'));
+    tocModal.addEventListener('click', (e) => { if (e.target === tocModal) tocModal.classList.remove('active'); });
+
+    /* LIGHTBOX */
+    const lbModal = document.getElementById('lightboxModal');
+    const lbImg = document.getElementById('lightboxImg');
+    const lbCaption = document.getElementById('lightboxCaption');
+    let lbPage = 0;
+    let lbIdx = 0;
+
+    window.openLightbox = function(pageIdx) {
+      const item = BOOK_DATA[pageIdx];
+      if (!item || !item.photos || item.photos.length === 0) return;
+      lbPage = pageIdx;
+      lbIdx = photoIndices[pageIdx] || 0;
+      updateLightboxContent();
+      lbModal.classList.add('active');
+    };
+
+    window.openLightboxToImage = function(pageIdx, photoIdx) {
+      const item = BOOK_DATA[pageIdx];
+      if (!item || !item.photos || item.photos.length === 0) return;
+      lbPage = pageIdx;
+      lbIdx = photoIdx;
+      updateLightboxContent();
+      lbModal.classList.add('active');
+    };
+
+    function updateLightboxContent() {
+      const item = BOOK_DATA[lbPage];
+      const currentPhoto = item.photos[lbIdx];
+      lbImg.src = getPhotoPath(item.folder, currentPhoto.file);
+      lbCaption.innerHTML = `
+        <strong>${currentPhoto.caption || item.title}</strong><br>
+        <span style="font-size:11.5px; color:#f7e29c;">অধ্যায় ${item.chapterNum || ''}: ছবি ${toBengaliNumber(lbIdx + 1)} / ${toBengaliNumber(item.photos.length)}</span>
+      `;
+      const hasMultiple = item.photos.length > 1;
+      document.getElementById('lbPrevBtn').style.display = hasMultiple ? 'flex' : 'none';
+      document.getElementById('lbNextBtn').style.display = hasMultiple ? 'flex' : 'none';
+    }
+
+    function lbNav(delta) {
+      const item = BOOK_DATA[lbPage];
+      if (!item || item.photos.length <= 1) return;
+      lbIdx = (lbIdx + delta + item.photos.length) % item.photos.length;
+      updateLightboxContent();
+      setPhotoIndex(lbPage, lbIdx);
+    }
+
+    function closeLightbox() { lbModal.classList.remove('active'); }
+
+    document.getElementById('lbPrevBtn').addEventListener('click', () => lbNav(-1));
+    document.getElementById('lbNextBtn').addEventListener('click', () => lbNav(1));
+    document.getElementById('lightboxCloseBtn').addEventListener('click', closeLightbox);
+    lbModal.addEventListener('click', (e) => { if (e.target === lbModal || e.target.classList.contains('lightbox-img-wrap')) closeLightbox(); });
+
+    document.getElementById('musicBtn').addEventListener('click', () => audioPlayer.toggle());
+    document.getElementById('fsBtn').addEventListener('click', () => {
+      if (!document.fullscreenElement) document.documentElement.requestFullscreen().catch(() => {});
+      else document.exitFullscreen().catch(() => {});
+    });
+
+    renderBook();
+    updateBookFlip();
+  </script>
+</body>
+</html>
